@@ -1,0 +1,56 @@
+$center: 0 auto;
+$min-width-logo: 80px;
+//width
+$container: (
+        "xs": 92%,
+        "ml": 81.5%,
+        "xl": 90%
+);
+
+//adaptive
+$breakpoints: (
+        "small": 450px,
+        "medium": 768px,
+        "x-medium": 1200px,
+        "large": 1650px,
+        "x-large": 2560px,
+);
+
+//retina-image
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+//colors
+$main-color: #181818;
+$accent-color: #FDA725;
+$white: #ffffff;
+
+//height-header
+$header-height-xs: 85px;
+$header-height-ml: 100px;
+$header-height-xl: 100px;
+
+// transition conf
+$duration: 0.3s;
+$transition-style: ease-in-out;
+//color
+$blue: #228F9D;
+$blue-text: #3B939C;
+$white: #ffffff;
+$red: #d22856;
+$gray: #686868;
+$dark-gray: #404040;
+$gray-btn: #dddfe0;
+$gray-border: #485461;
+$gray-table: #e5e5e5;
+$green: #2aab6d;
+$black: #000000;
+$padding-mobile: 0 3%;
+$padding-decstop: 0 130px;
+$table-col: 4;
+$table-border: 2px solid $gray-table;
+$table-width-xs: 280px;
+$table-width-m: 620px;
+$table-width-xl: 940px;
+$header-height-xs: 72px;
+$header-height-m: 110px;

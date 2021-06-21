@@ -1,0 +1,233 @@
+
+@include font-face("CenturyGothic", "../fonts/CenturyGothic", 400, normal);
+@include font-face("CenturyGothicBold", "../fonts/CenturyGothic-Bold", 700, normal);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  //font-family: 'Bebas Neue', cursive;
+
+  //font-family: 'Philosopher', sans-serif;
+html {
+  @include font-style(14px, 19px, 300);
+  letter-spacing: 0.01em;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@include respond-to(medium) {
+  html {
+    @include font-style(18px, 30px, 300);
+  }
+}
+
+@include respond-to(large) {
+  html {
+    @include font-style(18px, 33px, 300);
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $main-color;
+  background-color: $white;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="range"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+textarea {
+  box-sizing: border-box;
+  resize: none;
+  overflow: auto;
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid rgb(204, 204, 204);
+  font-size: 15px;
+  line-height: 1.6;
+  height: 60px;
+}
+
+.subtitle {
+  font-family:'CenturyGothic',sans-serif;
+  font-size: 16px;
+  line-height: 136.19%;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #484848;
+  position: relative;
+  &:after {
+    @include pseudo();
+    width: 52px;
+    height: 0px;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    border:  0.5px solid #228F9D;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 468px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.subscribe-wrap {
+  padding: 5vw 0;
+}
+
+.main-content {
+  &--services {
+    .about,
+    .subscribe,
+    .application {
+      display: none;
+    }
+  }
+}
+
+table.list {
+  width: 100%;
+  margin:50px auto;
+  border-spacing: 20px 10px;
+}
+
+th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+td, th {
+  padding: 10px;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+}
+
+.labels tr td {
+  background-color:  #F5F4F1;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 135.19%;
+  letter-spacing: 0.12em;
+  color: #484848;
+}
+
+.label tr td label {
+  display: block;
+}
+
+
+[data-toggle="toggle"] {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+.expand-content {
+  tr td {
+    font-size: 14px;
+    line-height: 150.69%;
+    letter-spacing: 0.065em;
+    color: #686868;
+    border-bottom: 1px dotted $blue;
+  }
+  tr td.info {
+    font-size: 16px;
+    line-height: 157.19%;
+    letter-spacing: 0.06em;
+    color: #404040;
+
+    a {
+      font-size: 13px;
+      line-height: 136.19%;
+      letter-spacing: 0.07em;
+      color: #6F6F6F;
+      display: block;
+    }
+  }
+}
+
+.lg-outer .lg-img-wrap, .lg-outer .lg-item {
+  left: 0;
+}
+
+@include respond-to(medium) {
+  .main-content {
+    &--services {
+      .about,
+      .subscribe,
+      .application {
+        display: block;
+      }
+    }
+  }
+  .subtitle {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 136.19%;
+    letter-spacing: 0.25em;
+  }
+}
+
+@include respond-to(x-medium) {
+  .map {
+    height: 600px;
+    margin-top: -400px;
+  }
+}
+@include  respond-to(large) {
+  .subscribe-wrap {
+    padding: 5vw 0;
+    display: flex;
+    max-width: 1620px;
+    margin: $center;
+    align-items: flex-end;
+
+    section {
+      padding: 0 46px;
+    }
+  }
+  .subtitle {
+    font-size: 24px;
+    line-height: 136.19%;
+    letter-spacing: 0.25em;
+    font-weight: 400;
+    color: #404040;
+  }
+}

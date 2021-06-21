@@ -1,0 +1,57 @@
+.experts-intro {
+width: 100%;
+  padding-left: 10%;
+  padding-top: 20px;
+  &__wrap {
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    h1 {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 111.69%;
+      letter-spacing: 0.395em;
+      text-transform: uppercase;
+    }
+    padding-right: 20px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 136.19%;
+    letter-spacing: 0.01em;
+    color: $gray;
+    padding-bottom: 30px;
+  }
+  &__img {
+    margin-top: -20px;
+    background: url("../img/info-sm.png") center center / cover no-repeat;
+    width: 100%;
+    height: 210px;
+  }
+}
+@include respond-to(medium) {
+  .experts-intro {
+    padding-left: 0;
+    padding-top: 60px;
+    margin-bottom: 65px;
+
+    &__wrap {
+      padding: 0;
+      width: 80%;
+      margin: $center;
+      margin-bottom: 40px;
+
+      h1 {
+        font-size: 45px;
+        line-height: 107.19%;
+        letter-spacing: 0.395em;
+        color: #595959;
+      }
+    }
+    &__img {
+      margin-top: 0;
+      width: 80vw;
+      height: 40vw;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}

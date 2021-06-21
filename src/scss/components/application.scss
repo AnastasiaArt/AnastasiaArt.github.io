@@ -1,0 +1,143 @@
+.application {
+  width: 100%;
+  padding: 0 2vw;
+  margin: $center;
+
+  &__title {
+
+  }
+
+  &__form {
+    input, textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 136.19%;
+      letter-spacing: 0.11em;
+      padding: 7px 12px;
+      border: 0.5px solid #828282;
+      border-radius: 2px;
+
+      &::placeholder {
+        font-weight: 300;
+        font-size: 14px;
+        color: #404040;
+      }
+
+      textarea {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-checkbox {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 114.19%;
+      letter-spacing: 0.095em;
+      max-width: 250px;
+      margin: $center;
+      margin-bottom: 20px;
+
+      a {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 114.19%;
+        letter-spacing: 0.095em;
+        color: #404040;
+      }
+
+      input {
+        width: auto !important;
+      }
+    }
+  }
+
+  &__form-note {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 136.19%;
+    letter-spacing: 0.075em;
+    text-decoration-line: underline;
+    color: #838383;
+  }
+
+  &__btn {
+    display: block;
+    margin: $center;
+    margin-top: 20px;
+  }
+}
+
+@include respond-to(medium) {
+  .application {
+    padding: 0 30px;
+
+    &__form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      input {
+        width: 49%;
+        font-size: 16px;
+
+        &::placeholder {
+          font-size: 16px;
+        }
+      }
+
+      &-checkbox {
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+        font-size: 16px;
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__form-note {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+}
+
+@include respond-to(large){
+  .application {
+    padding: 0 46px;
+    &__title {
+      display: none;
+    }
+    &__form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      input, textarea {
+        width: 100%;
+        max-width: 580px;
+      }
+      &-checkbox {
+        max-width: 580px;
+        margin: 0;
+        text-align: left;
+        margin-top: 17px;
+        margin-bottom: 5px;
+      }
+    }
+    &__form-note {
+      max-width: 580px;
+      text-align: left;
+      padding-left: 20px;
+      display: inline;
+    }
+    &__btn {
+      margin-left: 35px;
+      margin-top: -114px;
+      height: 58px;
+    }
+  }
+}

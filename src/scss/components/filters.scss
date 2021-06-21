@@ -1,0 +1,77 @@
+.filter-services {
+  width: 250px;
+  .ss-multi-selected {
+    border: none;
+    &::after {
+      content: "Специальность";
+      width: 200px;
+      height: 40px;
+    };
+  }
+  .ss-values {
+    position: absolute;
+    bottom: -50px;
+    .ss-disabled {
+      display: none!important;
+    }
+  }
+}
+.filter-experts {
+  width: 250px;
+  margin-left: 30px;
+  margin-right: auto;
+  .ss-multi-selected {
+    border: none;
+    &::after {
+      content: "Направление";
+      width: 200px;
+      height: 40px;
+    };
+  }
+  .ss-values {
+    position: absolute;
+    bottom: -100px;
+    left: -280px;
+    .ss-disabled {
+      display: none!important;
+    }
+  }
+}
+.filters {
+  border-bottom: 0.5px solid #BDBDBD;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+
+  &::after {
+    @include pseudo();
+    content: 'Л';
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    top: 5px;
+
+  }
+  .search {
+    border: none;
+    padding-right: 50px;
+    max-width: 350px;
+  }
+}
+.experts {
+  .sort {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    border: 1px solid #228F9D;
+    border-radius: 52px;
+    font-size: 14px;
+    line-height: 136.19%;
+    display: block;
+    padding: 7px 12px;
+    background: none;
+    letter-spacing: 0.095em;
+  }
+}

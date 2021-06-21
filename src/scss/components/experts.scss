@@ -1,0 +1,299 @@
+.experts {
+padding-top: 70px;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    @include list();
+    img {
+      width: 100vw;
+      max-width: 100vw;
+      display: block;
+      margin-left: calc((100% - 100vw)/2);
+    }
+    li {
+      margin-bottom: 30px;
+        position: relative;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  &__name {
+    font-size: 18px;
+    line-height: 126.19%;
+    letter-spacing: 0.105em;
+    color: #FFFFFF;
+    margin-top: -56px;
+    padding-left: 15px;
+    position: relative;
+    font-weight: 400;
+    &::after {
+      @include pseudo();
+      height: 94px;
+      width: 2px;
+      background: #228F9D;
+      top: -3px;
+      z-index: 10;
+      left: 0;
+    }
+    p {
+      margin: 0;
+    }
+    b {
+      display: block;
+      font-weight: 700;
+    }
+  }
+  &__prof {
+    padding-top: 26px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 136.19%;
+    letter-spacing: 0.135em;
+    color: #424242
+  }
+  .btn {
+    text-transform: capitalize;
+    &--blue {
+      box-shadow: 0px 24px 35px -13px rgba(34, 143, 157, 0.53);
+    }
+  }
+  &__text {
+    display: none;
+  }
+  &__list--filtered {
+    display: none;
+  }
+}
+
+@include respond-to(medium) {
+  .experts {
+    padding-bottom: 50px;
+    position: relative;
+    &::after {
+      @include pseudo();
+      top: 20px;
+      left: 0;
+      width: 82px;
+      height: 440px;
+      background: url("../img/pageindex/wave-experts-md.svg") center center / contain no-repeat;
+    }
+    button {
+      padding: 7px 12px;
+    }
+    &__title {
+      margin-bottom: 42px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 -17px;
+      width: calc(100% + 34px);
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      li {
+        margin-bottom: 40px;
+        width: 50%;
+        padding: 17px;
+        .stocks__btn-wrap{
+            margin-top: 0;
+          padding-left: 40px;
+          button {
+            padding: 7px 12px;
+          }
+        }
+      }
+    }
+
+    &__name {
+      font-size: 17px;
+      line-height: 136.19%;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #535353;
+      margin-top: -50px;
+      padding: 17px 10px 0 40px;
+      position: relative;
+      font-weight: 300;
+      &::after {
+        left: 25px;
+        height: 90px;
+      }
+
+      span {
+        display: none;
+      }
+      b {
+        display: inline;
+      }
+      p {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        text-overflow: ellipsis;
+      }
+
+      &::before {
+        @include pseudo();
+        width: 90%;
+        top: 0;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.85);
+        z-index: 1;
+        left: 0;
+      }
+    }
+
+    &__prof {
+      padding: 20px 10px 0 40px;
+      font-size: 14px;
+      line-height: 124.69%;
+      letter-spacing: 0.115em;
+    }
+  }
+  &__list--filtered {
+    display: none;
+  }
+}
+
+@include respond-to(large) {
+  .experts {
+    padding-bottom: 100px;
+    &::after {
+      @media (min-width: 1750px) {
+        @include pseudo();
+        top: 330px;
+        left: 0;
+        width: 290px;
+        height: 785px;
+        background: url("../img/pageindex/wave-experts-lg.svg") center center / contain no-repeat;
+      }
+    }
+    &__name {
+      font-size: 18px;
+      line-height: 136.19%;
+    }
+    &--filters {
+      .container {
+        max-width: 1608px;
+      }
+    }
+
+    &__list {
+      max-width: 1340px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+
+      &--selected {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-column-gap: 70px;
+        grid-row-gap: 10px;
+
+        li {
+          width: 100%;
+          padding: 0;
+          margin-bottom: 0;
+          &:nth-child(n) {
+            grid-column: span 2;
+          }
+          &:nth-child(1) {
+            grid-row: span 2;
+            grid-column: span 3;
+
+            .experts__text {
+              display: block;
+              padding-left: 66px;
+              margin-top: 0;
+              margin-bottom: 30px;
+            }
+
+            .experts__name {
+              margin-top: 0;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 126.19%;
+              padding-top: 30px;
+              padding-left: 66px;
+
+              span {
+                display: inline;
+              }
+
+              &::before {
+                content: none;
+              }
+            }
+
+            .experts__prof {
+              font-size: 16px;
+              line-height: 136.19%;
+              letter-spacing: 0.185em;
+              margin-bottom: 20px;
+              padding-left: 66px;
+            }
+
+            .stocks__btn-wrap{
+              padding-left: 66px;
+              button {
+                padding: 12px;
+              }
+            }
+
+            img {
+              width: 100%;
+              min-height: 656px;
+              object-fit: cover;
+            }
+          }
+
+          &:nth-child(4) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &__list--filtered {
+      display: block;
+      width: 40%;
+      height: 1200px;
+
+      .experts__text {
+        max-height: 330px;
+        overflow: hidden;
+        display: block;
+      }
+    }
+
+    &__list-wrap {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__list--all {
+      overflow: auto;
+      height: 1200px;
+    }
+  }
+  #btnShowExperts {
+    padding: 20px;
+    margin-top: 80px;
+  }
+}

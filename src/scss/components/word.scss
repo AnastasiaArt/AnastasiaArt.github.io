@@ -1,0 +1,167 @@
+.word {
+  padding-top: 45px;
+  padding-bottom: 90px;
+  position: relative;
+  &::after {
+    @include pseudo();
+    background: url("../img/pageindex/wave-word.png") center center / cover no-repeat;
+    //background-size: 100% 100%;
+    width: 100vw;
+    height: 50vw;
+    bottom: -10vw;
+    z-index: -1;
+  }
+
+  &__text {
+    padding: 0 4%;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 149.69%;
+    letter-spacing: 0.01em;
+    text-align: left;
+    p {
+      margin-top: 0;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    position: relative;
+    &::after {
+      @include pseudo();
+      position: absolute;
+      width: 53px;
+      height: 53px;
+      left: 0px;
+      background: #228F9D;
+      border-radius: 50%;
+      box-shadow: 0px 24px 35px -13px #228F9D;
+    }
+  }
+  &__note {
+    font-style: italic;
+  }
+
+  &__img {
+    text-align: right;
+    position: relative;
+    img {
+      width: 80%;
+      max-width: 468px;
+    }
+    &::before {
+      @include pseudo();
+      width: 94px;
+      height: 94px;
+      border: 1px solid #228F9D;
+      border-radius: 50%;
+      left: 20%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::after{
+      @include pseudo();
+      width: 90%;
+      max-width: 600px;
+      height: 88px;
+      bottom: 6%;
+      right: 0;
+      background: #F1F1F0;
+      z-index: -1;
+    }
+  }
+}
+@include respond-to(medium) {
+  .word {
+    padding-bottom: 40px;
+    &__title {
+      text-align: left;
+      padding: 0 17% ;
+
+      &::after {
+        left: calc(5% + 25px);
+      }
+
+    }
+    &__wrap {
+      display: flex;
+    }
+    &__text {
+      padding: 0 5%;
+      width: 50%;
+  }
+    &__img {
+      width: 50%;
+
+      img {
+        width: 100%;
+        max-width: 455px;
+        height: 100%;
+        object-fit: revert;
+      }
+
+      &::before {
+        @include pseudo();
+        top: 70%;
+        background: $blue;
+        left: 0;
+      }
+
+      &::after {
+        @include pseudo();
+        width: 120%;
+        height: 122px;
+        max-width: 920px;
+        bottom: 30%;
+      }
+    }
+  }
+}
+
+@include respond-to(x-medium) {
+  .word {
+    padding: 130px 0;
+    max-width: 1335px;
+    margin: $center;
+    &::after {
+      left: calc((1335px - 100vw)/2);
+      min-width: 1335px;
+      width: calc(100vw + (100vw - 1335px));
+    }
+    &__title {
+      &::after {
+        left: 25px;
+      }
+    }
+
+    &__wrap, &__title {
+      padding-left: 120px;
+    }
+    &__text {
+      padding: 0;
+      width: 55%;
+      p {
+        max-width: 580px;
+      }
+    }
+    &__img {
+      width: 45%;
+      &::before {
+        @include pseudo();
+        top: 70%;
+        left: 120%;
+      }
+
+      &::after {
+        @include pseudo();
+        left: auto;
+        right: calc((1335px - 100vw)/2);
+        width: 70vw;
+        bottom: 30%;
+        height: 146px;
+
+      }
+    }
+  }
+}
+
+

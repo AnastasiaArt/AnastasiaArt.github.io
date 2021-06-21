@@ -1,0 +1,223 @@
+.stocks {
+  padding: 0 20px;
+  position: relative;
+&::after {
+  @include pseudo();
+  width: 76px;
+  height: 263px;
+ right: 0;
+  top:0;
+   z-index: -1;
+  background: #515151;
+}
+  &__subtitle {
+    margin: 30px auto;
+  }
+  &__list {
+    @include list();
+    width: 100%;
+  }
+  &__item {
+    margin-bottom: 25px;
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+  &__list--all {
+    li:nth-child(n + 4) {
+      display: flex;
+    }
+  }
+  &__persent {
+    background: rgba(193, 176, 167, 0.5);
+    border-radius: 3px;
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    font-size: 16px;
+    line-height: 136.19%;
+    text-align: left;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    color: #FFFFFF
+  }
+  &__title {
+    padding: 10px 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 136.19%;
+    letter-spacing: 0.01em;
+    color: #373737;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 136.19%;
+    letter-spacing: 0.01em;
+    color: #337680;
+    margin-bottom: 14px;
+    span{
+      color: $gray;
+      text-decoration: line-through;
+    }
+  }
+
+  &__btn-wrap {
+    display: flex;
+    margin-top: auto;
+    .btn {
+      border-radius: 3px;
+      width: 49%;
+      box-shadow: none;
+      text-transform: capitalize;
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__img-wrap {
+    width: 100%;
+    position: relative;
+  }
+
+  &__preview {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 93px;
+    height: 93px;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    img{
+      display: block;
+    }
+
+  }
+}
+
+@include respond-to(medium) {
+  .stocks {
+    &::after {
+      content: 'promotions' !important;
+      writing-mode: vertical-rl;
+      z-index: -1;
+      font-family: Bebas Neue;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 83.69%;
+      height: 40%;
+      letter-spacing: 0.88em;
+      text-transform: uppercase;
+      text-align: left;
+
+      color: #FFFFFF
+    }
+    &__persent {
+      top: 20px;
+      right: 0px;
+    }
+    &__subtitle {
+      margin-top: 60px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__item {
+      width: 50%;
+      padding: 10px;
+      &:nth-child(4) {
+        display: block;
+      }
+      &:nth-child(n + 5) {
+        display: none;
+      }
+    }
+    &__list--all {
+      li:nth-child(n + 5) {
+        display: flex;
+      }
+    }
+    &__btn-wrap {
+      margin-top: 30px;
+      .btn--blue {
+        box-shadow: 0px 24px 35px -13px #228F9D;
+      }
+    }
+  }
+}
+@include respond-to(x-medium) {
+  .stocks {
+    &::after {
+      width: 45%;
+      font-size: 45px;
+      line-height: 83.69%;
+      letter-spacing: 0.885em;
+      text-transform: uppercase;
+      max-height: 520px;
+      height: 82%;
+    }
+    &__subtitle {
+      margin-top: 160px;
+      margin-bottom: 70px;
+    }
+    &__list {
+      max-width: 1340px;
+      margin: $center;
+      margin-bottom: 30px;
+    }
+    &__item {
+      width: 33.3%;
+      max-width: 400px;
+      padding: 0;
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+    &__list--all {
+      li:nth-child(n + 4) {
+        display: flex;
+      }
+    }
+    &__img-wrap {
+      max-height: 400px;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+@include respond-to(large) {
+  .stocks {
+    &__list {
+      position: relative;
+
+      &::before {
+        @include pseudo();
+        position: absolute;
+        width: 271px;
+        height: 271px;
+        border: 1px solid #228F9D;
+        border-radius: 50%;
+        top: 20px;
+        left: -160px;
+        z-index: 10;
+      }
+    }
+  }
+}

@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
+    <title>JS Excel</title>
+    <style>
+    </style>
+</head>
+<body>
+<header class="main-header main-header--opened">
+    <div class=" container">
+        <div class="main-header__wrapper">
+            <div class="main-header__wrapper-logo">
+                <a class="main-header__logo" href="/">
+                    <img src="img/header/logo-lg.png" alt="">
+                </a>
+            </div>
+            <div class="main-header__time">
+                <span class="main-header__time--text">Ежедневно | </span><span> с 09:00 до 21:00</span><br><span>+7 (812) 386-2002</span>
+            </div>
+            <button type="button" class="btn btn--blue-border main-header__note">запись <span>на прием</span></button>
+            <button class="main-nav__button" type="button" aria-label="Открыть меню"></button>
+            <nav class="main-nav main-nav--closed main-nav-nojs">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link main-nav__link--current" href="services.html">Направления и
+                        услуги</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="experts.html">Специалисты</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="/">Акции</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="/">Контакты</a></li>
+                </ul>
+                <div class="main-nav__btn--call-wrap">
+                    <span>+7 (812) 386-2002</span>
+                    <button type="button" class="main-nav__btn--call btn--link">обратный звонок</button>
+                </div>
+
+                <button type="button" class="btn btn--gray-border mb-15 main-nav__note">запись на прием</button>
+                <button type="button" class="btn btn--gray-border">вызов врача</button>
+                <div class="main-nav__time">
+                    Ежедневно<br> с 09:00 до 21:00
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<main class="main-content main-content--services">
+    <section class="services-intro">
+        <div class="services-intro__wrap">
+            <h1 class="services-intro__title">Наши услуги</h1>
+            <p class="services-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="services-intro__img"></div>
+    </section>
+    <section class="services-page">
+        <input class="search" placeholder="Search" />
+        <button type="button" class="services-page btn btn--gray-border" id="downloadPrice">Полный прайс-лист</button>
+        <ul class="services-page__list">
+            <li>
+                <a href="pediatrics.html" class="services-page__item">
+                  <div class="services-page__title">Педиатрия</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Программа ведения беременности</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Маммология</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Урология</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Терапия - эндокринология </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">отоларинтология</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Проктологияи</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Флебология</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Малоинвазивные операции</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Вакцинации</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Массажи</div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="services-page__item">
+                    <div class="services-page__title">Офтальмология</div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section class="reviews">
+        <h3 class="reviews__title subtitle">Отзывы</h3>
+        <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+            </div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container gallery-top">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+                <div class="swiper-slide"
+                     style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+    </section>
+    <section class="services-about">
+        <h3 class="services-about__subtitle subtitle">Клиника</h3>
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/about-slider.png"></div>
+                <div class="swiper-slide"><img src="img/about-slider.png"></div>
+                <div class="swiper-slide"><img src="img/about-slider.png"></div>
+                <div class="swiper-slide"><img src="img/about-slider.png"></div>
+                <div class="swiper-slide"><img src="img/about-slider.png"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <div class="subscribe-wrap">
+        <section class="subscribe">
+            <div class="container">
+                <div class="subscribe__wrap">
+                    <div class="subscribe__item">
+                        <h4 class="subscribe__subtitle">info@novavita.ru</h4>
+                        <span>По всем вопросам</span>
+                    </div>
+                    <div class="subscribe__item">
+                        <h4 class="subscribe__subtitle"><a href="#">Подписка</a></h4>
+                        <span>Не пропустите выгодные акции</span>
+                        <form onsubmit="alert('submit!');return false" class="subscribe__form">
+                            <input type="text" placeholder="Введите e-mail или номер телефона"><br>
+                            <button type="submit" class="subscribe__btn btn" aria-label="send">
+                                <span>Подписаться</span><img src="img/about-slider.png" alt="send"></button>
+                        </form>
+                    </div>
+                    <div class="subscribe__item">
+                        <h4 class="subscribe__subtitle">WhatsApp</h4>
+                        <span>Написать в Whatsapp</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="application">
+            <h3 class="application__title subtitle">Оставить заявку</h3>
+            <form onsubmit="console.log(event);return false" class="application__form">
+                <input type="text" name="name" placeholder="Укажите имя"><br>
+                <input type="phone" name="phone" placeholder="Укажите имя" id="phoneMask"><br>
+                <textarea data-autoresize rows="3" name="ask" placeholder="Что Вас интересует"></textarea>
+                <div class="application__form-checkbox">
+                    <input type="checkbox" name="confirm" checked>
+                    <label for="confirm">Согласен с <a href="#"> политикой конфиденциальности</a></label>
+                </div>
+                <span class="application__form-note">Мы не передаем Ваши данные</span>
+                <button type="submit" class="application__btn btn btn--blue" aria-label="send">Отправить</button>
+            </form>
+        </section>
+    </div>
+    <div id="overlay"></div>
+</main>
+<footer class="main-footer">
+    <div class="main-wrapper main-footer__wrapper">
+        <div class="main-footer__col main-footer__col--base">
+            <a class="main-footer__logo" href="/">
+                <img src="img/header/logo-lg.png" alt="" width="146" height="35">
+            </a>
+            <p class="main-footer__date"><b>Ежедневно</b> | 9:00-21:00</p>
+            <p>г. Санкт-Петербург,<br>
+                <strong>пр. Энгельса, 93</strong>
+            </p>
+            <p class="main-footer__mail">info@novavita.ru</p>
+        </div>
+        <div class="main-footer__col main-footer__col--departments">
+            <h4>Направления</h4>
+            <ul>
+                <li><a class="" href="/">Педиатрия</a></li>
+                <li><a class="" href="/">Отоларинтология</a></li>
+                <li><a class="" href="/">Ведение беременности и гинекология</a></li>
+                <li><a class="" href="/">Малоинвазивные операции</a></li>
+                <li><a class="" href="/">Маммология</a></li>
+                <li><a class="" href="/">Проктология</a></li>
+                <li><a class="" href="/">Урология</a></li>
+                <li><a class="" href="/">Офтольмология</a></li>
+                <li><a class="" href="/">Флебология</a></li>
+                <li><a class="" href="/">Вакцинации</a></li>
+                <li><a class="" href="/">Терапия - эндокринология</a></li>
+                <li><a class="" href="/">Массажи</a></li>
+            </ul>
+        </div>
+        <div class="main-footer__col main-footer__social social">
+            <h4>Соцсети</h4>
+            <ul class="social__list">
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" href="https://instagram.com">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.5 1.53212C10.7695 1.53212 11.0387 1.54062 11.9354 1.58171C14.2389 1.68654 15.3149 2.7795 15.4197 5.066C15.4608 5.96204 15.4686 6.23121 15.4686 8.50071C15.4686 10.7709 15.4601 11.0394 15.4197 11.9354C15.3142 14.2198 14.241 15.3149 11.9354 15.4197C11.0387 15.4608 10.7709 15.4693 8.5 15.4693C6.2305 15.4693 5.96133 15.4608 5.06529 15.4197C2.75612 15.3142 1.68583 14.2163 1.581 11.9347C1.53992 11.0387 1.53142 10.7702 1.53142 8.5C1.53142 6.2305 1.54063 5.96204 1.581 5.06529C1.68654 2.7795 2.75967 1.68583 5.06529 1.581C5.96204 1.54063 6.2305 1.53212 8.5 1.53212ZM8.5 0C6.19154 0 5.90254 0.00991667 4.99587 0.051C1.90896 0.192667 0.193375 1.90542 0.0517083 4.99517C0.00991667 5.90254 0 6.19154 0 8.5C0 10.8085 0.00991667 11.0982 0.051 12.0048C0.192667 15.0917 1.90542 16.8073 4.99517 16.949C5.90254 16.9901 6.19154 17 8.5 17C10.8085 17 11.0982 16.9901 12.0048 16.949C15.0889 16.8073 16.8088 15.0946 16.9483 12.0048C16.9901 11.0982 17 10.8085 17 8.5C17 6.19154 16.9901 5.90254 16.949 4.99587C16.8102 1.91179 15.0953 0.193375 12.0055 0.0517083C11.0982 0.00991667 10.8085 0 8.5 0V0ZM8.5 4.13525C6.08954 4.13525 4.13525 6.08954 4.13525 8.5C4.13525 10.9105 6.08954 12.8655 8.5 12.8655C10.9105 12.8655 12.8647 10.9112 12.8647 8.5C12.8647 6.08954 10.9105 4.13525 8.5 4.13525ZM8.5 11.3333C6.93529 11.3333 5.66667 10.0654 5.66667 8.5C5.66667 6.93529 6.93529 5.66667 8.5 5.66667C10.0647 5.66667 11.3333 6.93529 11.3333 8.5C11.3333 10.0654 10.0647 11.3333 8.5 11.3333ZM13.0376 2.94313C12.4738 2.94313 12.0169 3.4 12.0169 3.96312C12.0169 4.52625 12.4738 4.98312 13.0376 4.98312C13.6007 4.98312 14.0569 4.52625 14.0569 3.96312C14.0569 3.4 13.6007 2.94313 13.0376 2.94313Z"
+                                fill="#949494"/>
+                        </svg>
+                        <span class="">Instagram</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" href="https://www.facebook.com">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.5 1.53212C10.7695 1.53212 11.0387 1.54062 11.9354 1.58171C14.2389 1.68654 15.3149 2.7795 15.4197 5.066C15.4608 5.96204 15.4686 6.23121 15.4686 8.50071C15.4686 10.7709 15.4601 11.0394 15.4197 11.9354C15.3142 14.2198 14.241 15.3149 11.9354 15.4197C11.0387 15.4608 10.7709 15.4693 8.5 15.4693C6.2305 15.4693 5.96133 15.4608 5.06529 15.4197C2.75612 15.3142 1.68583 14.2163 1.581 11.9347C1.53992 11.0387 1.53142 10.7702 1.53142 8.5C1.53142 6.2305 1.54063 5.96204 1.581 5.06529C1.68654 2.7795 2.75967 1.68583 5.06529 1.581C5.96204 1.54063 6.2305 1.53212 8.5 1.53212ZM8.5 0C6.19154 0 5.90254 0.00991667 4.99587 0.051C1.90896 0.192667 0.193375 1.90542 0.0517083 4.99517C0.00991667 5.90254 0 6.19154 0 8.5C0 10.8085 0.00991667 11.0982 0.051 12.0048C0.192667 15.0917 1.90542 16.8073 4.99517 16.949C5.90254 16.9901 6.19154 17 8.5 17C10.8085 17 11.0982 16.9901 12.0048 16.949C15.0889 16.8073 16.8088 15.0946 16.9483 12.0048C16.9901 11.0982 17 10.8085 17 8.5C17 6.19154 16.9901 5.90254 16.949 4.99587C16.8102 1.91179 15.0953 0.193375 12.0055 0.0517083C11.0982 0.00991667 10.8085 0 8.5 0V0ZM8.5 4.13525C6.08954 4.13525 4.13525 6.08954 4.13525 8.5C4.13525 10.9105 6.08954 12.8655 8.5 12.8655C10.9105 12.8655 12.8647 10.9112 12.8647 8.5C12.8647 6.08954 10.9105 4.13525 8.5 4.13525ZM8.5 11.3333C6.93529 11.3333 5.66667 10.0654 5.66667 8.5C5.66667 6.93529 6.93529 5.66667 8.5 5.66667C10.0647 5.66667 11.3333 6.93529 11.3333 8.5C11.3333 10.0654 10.0647 11.3333 8.5 11.3333ZM13.0376 2.94313C12.4738 2.94313 12.0169 3.4 12.0169 3.96312C12.0169 4.52625 12.4738 4.98312 13.0376 4.98312C13.6007 4.98312 14.0569 4.52625 14.0569 3.96312C14.0569 3.4 13.6007 2.94313 13.0376 2.94313Z"
+                                fill="#949494"/>
+                        </svg>
+                        <span class="">Facebook</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--vk" href="https://www.vk.com">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.5 1.53212C10.7695 1.53212 11.0387 1.54062 11.9354 1.58171C14.2389 1.68654 15.3149 2.7795 15.4197 5.066C15.4608 5.96204 15.4686 6.23121 15.4686 8.50071C15.4686 10.7709 15.4601 11.0394 15.4197 11.9354C15.3142 14.2198 14.241 15.3149 11.9354 15.4197C11.0387 15.4608 10.7709 15.4693 8.5 15.4693C6.2305 15.4693 5.96133 15.4608 5.06529 15.4197C2.75612 15.3142 1.68583 14.2163 1.581 11.9347C1.53992 11.0387 1.53142 10.7702 1.53142 8.5C1.53142 6.2305 1.54063 5.96204 1.581 5.06529C1.68654 2.7795 2.75967 1.68583 5.06529 1.581C5.96204 1.54063 6.2305 1.53212 8.5 1.53212ZM8.5 0C6.19154 0 5.90254 0.00991667 4.99587 0.051C1.90896 0.192667 0.193375 1.90542 0.0517083 4.99517C0.00991667 5.90254 0 6.19154 0 8.5C0 10.8085 0.00991667 11.0982 0.051 12.0048C0.192667 15.0917 1.90542 16.8073 4.99517 16.949C5.90254 16.9901 6.19154 17 8.5 17C10.8085 17 11.0982 16.9901 12.0048 16.949C15.0889 16.8073 16.8088 15.0946 16.9483 12.0048C16.9901 11.0982 17 10.8085 17 8.5C17 6.19154 16.9901 5.90254 16.949 4.99587C16.8102 1.91179 15.0953 0.193375 12.0055 0.0517083C11.0982 0.00991667 10.8085 0 8.5 0V0ZM8.5 4.13525C6.08954 4.13525 4.13525 6.08954 4.13525 8.5C4.13525 10.9105 6.08954 12.8655 8.5 12.8655C10.9105 12.8655 12.8647 10.9112 12.8647 8.5C12.8647 6.08954 10.9105 4.13525 8.5 4.13525ZM8.5 11.3333C6.93529 11.3333 5.66667 10.0654 5.66667 8.5C5.66667 6.93529 6.93529 5.66667 8.5 5.66667C10.0647 5.66667 11.3333 6.93529 11.3333 8.5C11.3333 10.0654 10.0647 11.3333 8.5 11.3333ZM13.0376 2.94313C12.4738 2.94313 12.0169 3.4 12.0169 3.96312C12.0169 4.52625 12.4738 4.98312 13.0376 4.98312C13.6007 4.98312 14.0569 4.52625 14.0569 3.96312C14.0569 3.4 13.6007 2.94313 13.0376 2.94313Z"
+                                fill="#949494"/>
+                        </svg>
+                        <span class="">Вконтакте</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-footer__col main-footer__col--subscribe">
+            <h4>Подписка</h4>
+            <p>Чтобы быть в курсе акций, подпишитесь на нашу рассылку</p>
+        </div>
+        <div class="main-footer__col main-footer__col--legal">
+            <p class="main-footer__legal">Юридическая информация и лицензии</p>
+            <p class="main-footer__copyright">© 2019-2021, ООО "Клиника НоваВита", Все права защищены.</p>
+            <a href="#" class="main-footer__policy">Политика обработки персональных данных</a>
+        </div>
+        <div class="main-footer__author">
+            <span class="main-footer__author-text">Design by Victoria Ureke</span>
+        </div>
+    </div>
+</footer>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+
+<!-- Initialize Swiper -->
+<script>
+    let swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            1900: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+    })
+    let galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+            }
+        }
+    });
+    let galleryTop = new Swiper('.gallery-top', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        loop: true,
+        loopedSlides: 5, //looped slides should be the same
+        breakpoints: {
+            768: {
+                slidesPerView: "auto",
+                centeredSlides: true,
+                spaceBetween: 50,
+            },
+            1200: {
+                slidesPerView: "auto",
+                centeredSlides: true,
+                spaceBetween: 190,
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+.main-nav {
+  @include font-style(18px, 32px, bold);
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  right: calc(-260px - 45px);
+  top: 0;
+  background: $white;
+  border-radius: 3px;
+  transition: right 0.5s ease-in-out;
+  padding: 20px 40px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  box-shadow: 0 4px 45px rgba(0, 0, 0, 0.25);
+
+  &--opened {
+    right: 0;
+    transition: right 0.5s ease-in-out;
+  }
+
+  &__btn--call-wrap {
+    order: 1;
+    font-weight: 300;
+    color: #404040;
+    margin-top: auto;
+    margin-bottom: 30px;
+
+    span {
+      font-size: 14px;
+    }
+    button {
+      color: #404040;
+      border-bottom: 0.5px dotted $blue;
+      &:focus,
+      &:hover,
+      &:active {
+        svg path{
+          fill: $blue;
+        }
+      }
+    }
+  }
+  &__time {
+    order: 1;
+    font-size: 12px;
+    line-height: 136.19%;
+    font-weight: 300;
+    color:$gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-nav__button {
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.main-nav__button::before {
+  @include pseudo;
+  background: url("../img/header/burger.svg") center center / cover no-repeat;
+  top: 0;
+  right: 0;
+  width: 29px;
+  height: 39px;
+}
+
+.main-header--opened .main-nav__button {
+  &::before,
+  &::after {
+    @include pseudo;
+
+    top: 9px;
+    right: 0;
+    width: 17px;
+    height: 1px;
+    background-color: $gray;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $gray;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $gray;
+  }
+}
+
+.main-nav--nojs {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  position: static;
+}
+
+.main-nav--nojs .main-nav__item {
+  display: block;
+}
+
+.main-nav__list {
+  @include list;
+
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.main-nav__item {
+  @include indent;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-nav--closed .main-nav__list {
+  background-color: transparent;
+}
+.main-nav--opened {
+
+}
+.main-nav__list {
+  margin-top: 50px;
+}
+
+.main-nav__link {
+  font-size: 14px;
+  line-height: 163.69%;
+  letter-spacing: 0.145em;
+  @include link;
+
+  text-transform: uppercase;
+  margin: 0;
+  color: $gray;
+  padding: 12px 0;
+
+  &--current {
+    color: $dark-gray;
+    text-align: left;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+  }
+}
+
+.man-nav__link[href]:hover,
+.man-nav__link[href]:active {
+  border: none;
+  outline: none;
+  color: $blue;
+}
+
+@include respond-to(medium) {
+ .main-nav {
+   .btn {
+     border: 1px solid $blue;
+   }
+   &__note {
+     background-color: $blue;
+     color: $white;
+     box-shadow: 0px 21px 28px -9px rgba(34, 143, 157, 0.53);
+   }
+ }
+}
+
+@include respond-to(large) {
+  .main-nav {
+   width: auto;
+    position: relative;
+    right: auto;
+    box-shadow: none;
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+    align-items: center;
+    flex-grow: 2;
+    justify-content: flex-end;
+    .btn {
+      margin: 0;
+    }
+    &__btn--call-wrap {
+      order: 0;
+      margin: 0;
+      margin-right: 4%;
+      color: #686868;
+
+      span {
+        display: none;
+      }
+    }
+    &__time {
+      display: none;
+    }
+    &__note {
+      margin-right: 20px!important;
+    }
+  }
+
+  .main-nav__list {
+    margin: 0;
+    display: flex;
+    background-color: transparent;
+    width: auto;
+    justify-content: space-evenly;
+    flex-grow: 2;
+  }
+
+  .main-nav--closed .main-nav__item {
+    display: block;
+  }
+
+  .main-nav__item {
+    width: auto;
+  }
+
+  .main-nav--opened .main-nav__list {
+    background-color: transparent;
+  }
+
+  .main-nav__link {
+    padding: 40px 10px;
+    text-transform: none;
+    border: none;
+
+    &--current {
+    }
+  }
+
+  .main-nav__button {
+    display: none;
+  }
+}

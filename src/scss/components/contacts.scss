@@ -1,0 +1,95 @@
+.contacts {
+  background-color: rgba(33, 139, 152, 0.9);
+  color: white;
+  padding: 2vh 20px;
+  &__title {
+    padding-top: 40px;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  &__wrap {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150.19%;
+    letter-spacing: 0.075em;
+    text-transform: capitalize;
+    span {
+      font-weight: bold;
+      display: block;
+      line-height: 136.19%;
+      vertical-align: middle;
+      img {
+        padding-right: 12px;
+      }
+    }
+  }
+  &__text {
+    padding-left: 30px;
+  }
+  &__mail {
+    img {
+      padding-right: 12px;
+    }
+  }
+}
+ @include respond-to(medium) {
+   .contacts{
+     &__wrap {
+       display: flex;
+       justify-content: space-between;
+     }
+   }
+ }
+@include respond-to(x-medium) {
+  .contacts{
+    margin-left: 136px;
+    position: relative;
+    width: 430px;
+    overflow: visible;
+    height: 527px;
+    padding: 0;
+    &__title {
+      padding-top: 0;
+      margin: 30px;
+    }
+
+    .container {
+      height: inherit;
+      width: 100%;
+      position: absolute;
+      padding: 60px 50px;
+    }
+    &__wrap {
+      display: block;
+      font-size: 18px;
+      line-height: 136.19%;
+      letter-spacing: 0.075em;
+      div {
+        margin-bottom: 30px;
+        text-align: left;
+      }
+      span {
+        margin-bottom: 15px;
+        font-size: 18px;
+        letter-spacing: 0.115em;
+      }
+    }
+    &__mail {
+      text-align: left;
+      font-size: 16px;
+      line-height: 136.19%;
+      letter-spacing: 0.075em;
+    }
+  }
+}
+@include respond-to(large) {
+  .contacts {
+    margin-top: -50px;
+    .container {
+    }
+    &__title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  }

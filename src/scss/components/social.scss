@@ -1,0 +1,22 @@
+.social {
+  margin: 25px 0;
+&__list {
+  display: flex;
+  justify-content: space-between;
+  @include list();
+  width: 120px;
+  margin: $center;
+}
+}
+
+@include respond-to(large) {
+  .social {
+    &__item {
+      padding: 10px 0;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 136.19%;
+      letter-spacing: 0.075em;
+    }
+  }
+}

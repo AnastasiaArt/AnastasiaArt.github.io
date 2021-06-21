@@ -1,0 +1,169 @@
+.about {
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+
+.reviews .swiper-container {
+  width: 100%;
+  height: 529px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reviews .swiper-container.gallery-top {
+  overflow: visible;
+}
+.reviews .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  width: 75%;
+  max-width: 573px;
+}
+
+.gallery-top {
+  height: 80%;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  .swiper-pagination {
+    top: 10px;
+    bottom: auto;
+    z-index: 10;
+  }
+}
+
+.gallery-thumbs {
+  height: 77px!important;
+  box-sizing: border-box;
+  width: 77px!important;
+  margin: $center;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  width: 77px;
+  opacity: 0.4;
+  border-radius: 50px;
+  border-color: $blue;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+@include respond-to(medium) {
+  .about {
+    .swiper-slide {
+      width: 710px;
+      height: 440px;
+    }
+  }
+  .reviews .swiper-container {
+    height: 470px;
+  }
+  .gallery-thumbs {
+    height: 56px !important;
+    width: 220px!important;
+  }
+
+  .gallery-thumbs .swiper-slide {
+    width: 56px;
+  }
+
+  .gallery-top {
+    .swiper-pagination {
+      top: auto;
+      bottom: -50px;
+    }
+  }
+}
+
+@include respond-to(x-medium) {
+  .reviews .swiper-slide {
+    max-width: 810px;
+  }
+}
+
+
+@include respond-to(large) {
+  .about {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: block;
+      width: 44px;
+      height: 44px;
+      background: #515151;
+      color: $white!important;
+      border-radius: 50px;
+
+      &::after {
+        font-size: 22px;
+        line-height: 44px;
+        font-weight: bold;
+      }
+    }
+    .swiper-button-next {
+      left: 65%;
+      right: auto;
+    }
+    .swiper-button-prev {
+      left: 33%;
+      right: auto;
+    }
+  }
+  .reviews .swiper-container {
+    height: 270px;
+  }
+  .expertsCurrent,
+  .swiper-wrapper, {
+    width: 100%!important;
+    height: 100%!important;
+  }
+  .expertsCurrent {
+    margin-right: 30px;
+    .stocks__btn-wrap {
+      margin-bottom: 50px;
+    }
+    .swiper-slide {
+      padding: 10px 0!important;
+    }
+  }
+}

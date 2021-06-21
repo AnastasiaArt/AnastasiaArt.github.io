@@ -1,0 +1,30 @@
+.pediatr{
+.container {
+  max-width: 1350px;
+}
+}
+
+.pediatr-services {
+  text-align: right;
+  max-width: 1380px;
+  margin: $center;
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    button {
+      box-shadow: none!important;
+    }
+    input {
+      margin-left: auto;
+      margin-top: 15px;
+      border: none;
+    }
+  }
+  &__list {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
