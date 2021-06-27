@@ -1,29 +1,49 @@
 .experts {
-padding-top: 70px;
+  padding-top: 70px;
+
+  .active {
+    display: block;
+  }
+
   &__title {
     margin-top: 0;
     margin-bottom: 30px;
   }
+
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
     width: 100%;
+    display: none;
     @include list();
+    &--all {
+      display: block;
+      li {
+        display: flex!important;
+      }
+    }
+
     img {
       width: 100vw;
       max-width: 100vw;
       display: block;
-      margin-left: calc((100% - 100vw)/2);
+      margin-left: calc((100% - 100vw) / 2);
     }
+
     li {
       margin-bottom: 30px;
-        position: relative;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
+      position: relative;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+
+      &:nth-child(n + 4) {
+        display: none;
+      }
     }
   }
+
   &__name {
     font-size: 18px;
     line-height: 126.19%;
@@ -33,6 +53,7 @@ padding-top: 70px;
     padding-left: 15px;
     position: relative;
     font-weight: 400;
+
     &::after {
       @include pseudo();
       height: 94px;
@@ -42,14 +63,17 @@ padding-top: 70px;
       z-index: 10;
       left: 0;
     }
+
     p {
       margin: 0;
     }
+
     b {
       display: block;
       font-weight: 700;
     }
   }
+
   &__prof {
     padding-top: 26px;
     padding-left: 15px;
@@ -60,17 +84,44 @@ padding-top: 70px;
     letter-spacing: 0.135em;
     color: #424242
   }
+
   .btn {
-    text-transform: capitalize;
+    text-transform: none;
+    display: block;
+    margin: $center;
+
     &--blue {
       box-shadow: 0px 24px 35px -13px rgba(34, 143, 157, 0.53);
     }
   }
+
   &__text {
     display: none;
   }
+
   &__list--filtered {
     display: none;
+  }
+
+  #btnShowExperts {
+    border: none;
+    margin-bottom: 30px;
+
+
+    span {
+      padding: 5px 8px;
+      border-bottom: 1px solid #424242;
+      font-family:'CenturyGothic',sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 155.19%;
+      letter-spacing: 0.07em;
+      color: #464646;
+    }
+  }
+  .btn--all-experts {
+    max-width: 230px!important;
   }
 }
 
@@ -78,6 +129,7 @@ padding-top: 70px;
   .experts {
     padding-bottom: 50px;
     position: relative;
+
     &::after {
       @include pseudo();
       top: 20px;
@@ -86,19 +138,35 @@ padding-top: 70px;
       height: 440px;
       background: url("../img/pageindex/wave-experts-md.svg") center center / contain no-repeat;
     }
+
     button {
       padding: 7px 12px;
     }
+
     &__title {
       margin-bottom: 42px;
     }
 
-    &__list {
+    .active {
       display: flex;
+    }
+
+    &__list {
       flex-wrap: wrap;
       justify-content: space-between;
       margin: 0 -17px;
       width: calc(100% + 34px);
+      &--all {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-gap: 2.2em;
+        width: 100%;
+        margin: 0;
+        li {
+          width: auto!important;
+          padding: 0!important;
+        }
+      }
 
       img {
         width: 100%;
@@ -110,12 +178,18 @@ padding-top: 70px;
         margin-bottom: 40px;
         width: 50%;
         padding: 17px;
-        .stocks__btn-wrap{
-            margin-top: 0;
+
+        .stocks__btn-wrap {
+          margin-top: 0;
           padding-left: 40px;
+
           button {
             padding: 7px 12px;
           }
+        }
+
+        &:nth-child(4) {
+          display: block;
         }
       }
     }
@@ -130,6 +204,7 @@ padding-top: 70px;
       padding: 17px 10px 0 40px;
       position: relative;
       font-weight: 300;
+
       &::after {
         left: 25px;
         height: 90px;
@@ -138,9 +213,11 @@ padding-top: 70px;
       span {
         display: none;
       }
+
       b {
         display: inline;
       }
+
       p {
         position: relative;
         z-index: 2;
@@ -169,11 +246,17 @@ padding-top: 70px;
   &__list--filtered {
     display: none;
   }
+
 }
 
 @include respond-to(large) {
   .experts {
     padding-bottom: 100px;
+
+    .container {
+      position: relative;
+    }
+
     &::after {
       @media (min-width: 1750px) {
         @include pseudo();
@@ -184,10 +267,16 @@ padding-top: 70px;
         background: url("../img/pageindex/wave-experts-lg.svg") center center / contain no-repeat;
       }
     }
+
+    .active {
+      display: grid;
+    }
+
     &__name {
       font-size: 18px;
       line-height: 136.19%;
     }
+
     &--filters {
       .container {
         max-width: 1608px;
@@ -201,7 +290,6 @@ padding-top: 70px;
 
       &--selected {
         max-width: 100%;
-        display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-column-gap: 70px;
         grid-row-gap: 10px;
@@ -210,9 +298,11 @@ padding-top: 70px;
           width: 100%;
           padding: 0;
           margin-bottom: 0;
+
           &:nth-child(n) {
             grid-column: span 2;
           }
+
           &:nth-child(1) {
             grid-row: span 2;
             grid-column: span 3;
@@ -249,8 +339,9 @@ padding-top: 70px;
               padding-left: 66px;
             }
 
-            .stocks__btn-wrap{
+            .stocks__btn-wrap {
               padding-left: 66px;
+
               button {
                 padding: 12px;
               }
@@ -263,7 +354,7 @@ padding-top: 70px;
             }
           }
 
-          &:nth-child(4) {
+          &:nth-child(5) {
             display: block;
           }
         }
@@ -274,6 +365,13 @@ padding-top: 70px;
       display: block;
       width: 40%;
       height: 1200px;
+      padding-right: 20px;
+      .stocks__item {
+        flex: none!important;
+        width: auto!important;
+        max-width: 100% !important;
+        padding: 0!important;
+      }
 
       .experts__text {
         max-height: 330px;
@@ -290,10 +388,33 @@ padding-top: 70px;
     &__list--all {
       overflow: auto;
       height: 1200px;
+      grid-gap: 1.5em;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      .stocks__item {
+        max-width: 100% !important;
+      }
     }
   }
-  #btnShowExperts {
+  .btn--all-experts {
     padding: 20px;
-    margin-top: 80px;
+    margin-top: 90px !important;
+  }
+
+  #btnShowExperts {
+    border: none;
+    width: 120px;
+    height: 67px;
+    padding: 0;
+    background: url("../img/next-arrow.svg") center center / contain no-repeat;
+    position: absolute;
+    right: -150px;
+    top: 50%;
+
+    span {
+      display: none;
+    }
+  }
+  .prev {
+    background: url("../img/prev-arrow.svg") center center / contain no-repeat !important;
   }
 }

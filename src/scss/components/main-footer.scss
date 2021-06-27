@@ -7,6 +7,7 @@
   font-size: 13px;
   line-height: 136.19%;
   letter-spacing: 0.075em;
+
   &__logo {
     display: inline-block;
     margin-bottom: 30px;
@@ -34,6 +35,7 @@
     max-width: 80%;
     margin: $center;
   }
+
   &__col {
     h4 {
       display: none;
@@ -47,15 +49,18 @@
       display: none;
     }
   }
+
   &__policy,
   &__mail,
   &__date {
     display: none;
   }
+
   &__legal {
     margin-top: 10px;
     margin-bottom: 25px;
   }
+
   &__copyright {
     margin-bottom: 30px ;
   }
@@ -133,6 +138,7 @@
           flex-wrap: wrap;
           width: 100%;
           justify-content: space-between;
+
           li {
             width: 50%;
             text-align: left;
@@ -147,8 +153,8 @@
             padding: 7px 0;
             line-height: 179.69%;
           }
+          }
         }
-      }
 
       &--subscribe {
         display: block;
@@ -198,132 +204,202 @@
     }
   }
 }
+@media (min-width: 1064px) {
+  .main-footer__col {
+    &--departments {
+      ul {
+        li {
+          &:nth-child(1) {
+            order: 1;
+          }
 
+          &:nth-child(2) {
+            order: 2;
+          }
+
+          &:nth-child(3) {
+            order: 5;
+          }
+
+          &:nth-child(4) {
+            order: 4;
+          }
+
+          &:nth-child(5) {
+            order: 3;
+          }
+
+          &:nth-child(6) {
+            order: 11;
+          }
+
+          &:nth-child(7) {
+            order: 7;
+          }
+
+          &:nth-child(8) {
+            order: 8;
+          }
+
+          &:nth-child(9) {
+            order: 9;
+          }
+
+          &:nth-child(10) {
+            order: 10;
+          }
+
+          &:nth-child(11) {
+            order: 6;
+          }
+
+          &:nth-child(12) {
+            order: 12;
+          }
+
+          a {
+            max-width: 170px;
+          }
+        }
+      }
+    }
+
+    &--legal {
+      @media (max-width: 1200px) {
+        margin-top: -30px;
+      }
+    }
+  }
+}
 @include respond-to(large) {
-    .main-footer {
-      &__wrapper {
-        width: 92%;
-        max-width: 1628px;
-        flex-wrap: wrap;
+  .main-footer {
+    &__wrapper {
+      width: 92%;
+      max-width: 1628px;
+      flex-wrap: wrap;
+    }
+    &__logo {
+      margin-bottom: 9px;
+      img {
+        width: 184px;
+        height: 45px;
       }
-      &__logo {
-        margin-bottom: 9px;
+    }
+    &__col {
+      h4 {
+        display: block;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 136.19%;
+        letter-spacing: 0.075em;
+        text-transform: uppercase;
+        position: relative;
       }
-      &__col {
-        h4 {
-          display: block;
-          font-weight: 500;
-          font-size: 13px;
-          line-height: 136.19%;
-          letter-spacing: 0.075em;
-          text-transform: uppercase;
-          position: relative;
-        }
-        &--base {
-          max-width: 220px;
-        }
+      &--base {
+        max-width: 220px;
+      }
 
-        &--departments {
-          display: block;
-          width: 40%;
-          max-width: 543px;
-          h4 {
-            &::after {
-              @include pseudo();
-              width: 543px;
-              height: 0px;
-              bottom: -7px;
-              border: 0.5px solid #7A7A7A;
-            }
-          }
-          ul {
-            li {
-              max-width: 180px;
-            }
-          }
-        }
-
-        &--subscribe{
-          display: block;
-          order: 0;
-          width: 20%;
-          margin-left: 0;
-          margin-top: 0;
-          padding-right: 0;
-          p{
-            display: block;
-            margin-top: 24px;
-          }
-          h4 {
-            &::after {
-              @include pseudo();
-              width: 124px;
-              height: 0px;
-              bottom: -7px;
-              border: 0.5px solid #7A7A7A;
-            }
-          }
-        }
-        &--legal {
-          width: 80%;
-          margin-top: 50px;
-          position: relative;
-          max-width: 80%;
-          display: flex;
-          justify-content: space-between;
-          align-items: baseline;
-          font-weight: 300;
-          font-size: 12px;
-          line-height: 143.19%;
-          letter-spacing: 0.075em;
-          color: #B3B3B3;
-          order: 0;
-        }
-      }
-      &__social {
-        order: 0;
-        width: 20%;
-        max-width: 150px;
-        text-align: left;
-        margin: 0!important;
+      &--departments {
+        display: block;
+        width: 40%;
+        max-width: 543px;
         h4 {
           &::after {
             @include pseudo();
-            width: 89px;
+            width: 543px;
             height: 0px;
             bottom: -7px;
             border: 0.5px solid #7A7A7A;
           }
         }
-
-        a {
-          @include link();
-          color: $white;
-        }
-        svg {
-          display: none;
+        ul {
+          li {
+            max-width: 180px;
           }
-        span {
-          display: block;
+        }
+      }
 
-        }
-        .social__list {
-          flex-direction: column;
-          margin: 0;
-        }
-      }
-      &__author {
-        order: 0;
-        margin: 0;
-        margin-top: 60px;
-      }
-      &__policy {
-        color: #B3B3B3;
-      }
-      &__mail,
-      &__date {
+      &--subscribe{
         display: block;
+        order: 0;
+        width: 20%;
+        margin-left: 0;
+        margin-top: 0;
+        padding-right: 0;
+        p{
+          display: block;
+          margin-top: 24px;
+        }
+        h4 {
+          &::after {
+            @include pseudo();
+            width: 124px;
+            height: 0px;
+            bottom: -7px;
+            border: 0.5px solid #7A7A7A;
+          }
+        }
+      }
+      &--legal {
+        width: 80%;
+        margin-top: 50px;
+        position: relative;
+        max-width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 143.19%;
+        letter-spacing: 0.075em;
+        color: #B3B3B3;
+        order: 0;
       }
     }
+    &__social {
+      order: 0;
+      width: 20%;
+      max-width: 150px;
+      text-align: left;
+      margin: 0!important;
+      h4 {
+        &::after {
+          @include pseudo();
+          width: 89px;
+          height: 0px;
+          bottom: -7px;
+          border: 0.5px solid #7A7A7A;
+        }
+      }
+
+      a {
+        @include link();
+        color: $white;
+      }
+      svg {
+        display: none;
+        }
+      span {
+        display: block;
+
+      }
+      .social__list {
+        flex-direction: column;
+        margin: 0;
+      }
+    }
+    &__author {
+      order: 0;
+      margin: 0;
+      margin-top: 60px;
+    }
+    &__policy {
+      color: #B3B3B3;
+    }
+    &__mail,
+    &__date {
+      display: block;
+    }
+  }
 }
 

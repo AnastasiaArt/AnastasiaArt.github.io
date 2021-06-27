@@ -16,7 +16,10 @@
         <div class="main-header__wrapper">
             <div class="main-header__wrapper-logo">
                 <a class="main-header__logo" href="/">
-                    <img src="img/header/logo-lg.png" alt="">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="img/header/logo-lg.png 1x">
+                        <img src="img/header/logo-sm.png" alt="">
+                    </picture>
                 </a>
             </div>
             <div class="main-header__time">
@@ -103,7 +106,7 @@
     <div class="main-wrapper main-footer__wrapper">
         <div class="main-footer__col main-footer__col--base">
             <a class="main-footer__logo" href="/">
-                <img src="img/header/logo-lg.png" alt="" width="146" height="35">
+                <img src="img/footer/logo-black.png" alt="" width="146" height="35">
             </a>
             <p class="main-footer__date"><b>Ежедневно</b> | 9:00-21:00</p>
             <p>г. Санкт-Петербург,<br>

@@ -1,0 +1,211 @@
+.tingle-modal__close {
+  width: 1rem;
+  height: 1rem;
+}
+.tingle-modal {
+  background: rgba(122, 122, 122, 0.8);
+  height: 100vh;
+  overflow-y: hidden;
+}
+.tingle-modal-box {
+  height: 100%;
+  overflow-y: hidden;
+  width: 100%;
+}
+.tingle-modal-box__footer {
+  display: none;
+}
+.tingle-modal-box__content {
+  height: 100%;
+  padding: 0;
+  overflow-y: hidden;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .stocks {
+    &__img-wrap {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    &__btn-wrap {
+      margin-top: 0;
+    }
+
+    &__text {
+      display: block;
+      text-align: left;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 163.19%;
+      letter-spacing: 0.01em;
+      color: #000000;
+      flex-grow: 1;
+      overflow-y: auto;
+      max-height: calc(100% - 100px);
+      margin-bottom: 0;
+      order: 2;
+    }
+    &__doc {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 136.19%;
+      letter-spacing: 0.01em;
+      color: #373737;
+      display: block;
+      text-align: left;
+      margin-bottom: 10px;
+      span {
+        text-decoration: underline;
+      }
+    }
+    &__text-wrap {
+      flex-grow: 1;
+      overflow-y: hidden;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      .btn {
+        box-shadow: 0px 24px 35px -13px #228F9D;
+      }
+      .btn--blue-border {
+        display: none;
+      }
+    }
+    &__title {
+      font-family:'CenturyGothic',sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 136.19%;
+      letter-spacing: 0.01em;
+      color: #373737;
+      text-align: left;
+      padding-top: 0;
+    }
+    &__price {
+      text-align: left;
+      position: relative;
+      margin-bottom: 4px;
+    }
+    &__persent {
+      display: none;
+    }
+    &__persent--modal {
+      font-size: 16px;
+      line-height: 136.19%;
+      text-align: center;
+      letter-spacing: 0.01em;
+      color: #337680;
+      border: 1px solid #228F9D;
+      box-sizing: border-box;
+      border-radius: 41px;
+      display: inline;
+      width: 65px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-decoration: none;
+    }
+  }
+}
+.tingle-modal__closeLabel {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 136.19%;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  display: none;
+}
+.tingle-modal__close {
+  background: transparent;
+  left: auto;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  top: 10px;
+}
+
+@include respond-to(medium) {
+  .tingle-modal-box__content {
+     & > div{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    .stocks {
+      &__img-wrap {
+        width: 50%;
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: auto;
+        }
+      }
+      &__text-wrap {
+        width: 50%;
+        padding: 35px;
+        position: relative;
+        &::before {
+          @include pseudo();
+          left: 15px;
+          top: -80px;
+          z-index: 100001;
+          height: 190px;
+          width: 3px;
+          background: #3F9798;
+        }
+      }
+      &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 136.19%;
+        letter-spacing: 0.01em;
+        color: #373737;
+      }
+      &__text {
+        display: block;
+        max-height: 280px;
+        overflow-y: auto;
+        margin-top: 0;
+
+      }
+      &__btn-wrap {
+        margin-bottom: 20px;
+      }
+      &__doc {
+        order: 1
+      }
+      &__price {
+        margin-bottom: 14px;
+      }
+    }
+  }
+  .tingle-modal-box {
+    height: 80%;
+    width: 95%;
+    max-width: 967px;
+    max-height: 560px;
+  }
+  .tingle-modal__close {
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+}
+@include respond-to(large) {
+  .tingle-modal-box__content {
+    .stocks {
+      &__text {
+        font-size: 16px;
+      }
+      &__img-wrap {
+        max-height: 100%;
+      }
+    }
+  }
+}

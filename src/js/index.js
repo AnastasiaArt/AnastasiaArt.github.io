@@ -1,63 +1,9 @@
 import '@/scss/index.scss';
 import 'lightgallery.js/dist/js/lightgallery.min.js'
 import './navigation';
-import './buttonsEvent';
-import IMask from 'imask';
-// import 'lightgallery.js';
-// import Swiper from 'swiper';
-// let swiper = new Swiper(".mySwiper", {
-//     slidesPerView: "auto",
-//     spaceBetween: 30,
-//
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-//     breakpoints: {
-//         1900: {
-//             slidesPerView: 3,
-//             spaceBetween: 50,
-//         },
-//     },
-// })
-// console.log(swiper)
-// let reviewsSwiper2 = new Swiper(".reviewsSwiper2", {
-//     loop: true,
-//     spaceBetween: 10,
-//     slidesPerView: 4,
-//     freeMode: true,
-//     watchSlidesVisibility: true,
-//     watchSlidesProgress: true,
-// });
-// let reviewsSwiper = new Swiper(".reviewsSwiper", {
-//     spaceBetween: 30,
-//     centeredSlides: true,
-//     autoplay: {
-//         delay: 2500,
-//         disableOnInteraction: false,
-//     },
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-//
-// });
-// swiper.params.control = swiper2;
-// swiper2.params.control = swiper;
-// console.log(reviewsSwiper2)
-// console.log(reviewsSwiper)
-// import SlimSelect from 'slim-select'
 
-// function closeServicesModal(modal = null) {
-//     const serviceModals = document.querySelectorAll('.modal-hover');
-//     for (let m of serviceModals) {
-//         if( !modal  ||   m !== modal) {m.style.display = "none"}
-//     }
-// }
+import IMask from 'imask';
+
 
 function onHoverService(services) {
     if (window.innerWidth > 768) {
@@ -87,6 +33,7 @@ function onHoverService(services) {
         }
     }
 }
+
 function resize(callback ) {
     console.log('11')
     callback;
@@ -109,7 +56,7 @@ function addAutoResize() {
 }
 
 window.onload = () => {
-
+require('./buttonsEvent')
     const services = document.querySelectorAll('.services__item');
     resize( onHoverService(services));
     addAutoResize ();

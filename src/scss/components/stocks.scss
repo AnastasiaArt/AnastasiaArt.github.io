@@ -1,35 +1,51 @@
 .stocks {
   padding: 0 20px;
   position: relative;
-&::after {
-  @include pseudo();
-  width: 76px;
-  height: 263px;
- right: 0;
-  top:0;
-   z-index: -1;
-  background: #515151;
-}
+
+  &::after {
+    @include pseudo();
+    width: 76px;
+    height: 263px;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background: #515151;
+  }
   &__subtitle {
     margin: 30px auto;
   }
+
   &__list {
     @include list();
     width: 100%;
+    &--all {
+      //justify-content: flex-start;
+      max-width: 100% !important;
+      ////margin: 0 -10px;
+      &:before {
+        content: none!important;
+      }
+      li {
+      //  display: flex !important;
+      //  margin: 10px;
+      //  //width: 100%;
+      //  flex: 0 0 360px;
+      //  width: 50%;
+      }
+    }
   }
+
   &__item {
     margin-bottom: 25px;
     position: relative;
     text-align: left;
     display: flex;
     flex-direction: column;
+    height: 100%;
     img {
       width: 100%;
       height: auto;
-      object-fit: cover;
-    }
-    &:nth-child(n + 4) {
-      display: none;
+      //object-fit: cover;
     }
   }
   &__list--all {
@@ -72,6 +88,12 @@
     }
   }
 
+  &__text,
+  &__doc,
+  &__persent--modal {
+    display: none;
+  }
+
   &__btn-wrap {
     display: flex;
     margin-top: auto;
@@ -106,6 +128,10 @@
     }
 
   }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }
 
 @include respond-to(medium) {
@@ -136,13 +162,28 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      width: auto;
+      //justify-content: space-between;
+      &--all {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-gap: 1.2em;
+        //margin: 0 -10px;
+        li {
+          display: flex !important;
+          padding: 0;
+          //margin: 10px;
+          //width: 100%;
+          flex: none;
+        }
+      }
     }
     &__item {
-      width: 50%;
+      flex: 1 1 50%;
+      height: auto;
       padding: 10px;
       &:nth-child(4) {
-        display: block;
+        display: flex;
       }
       &:nth-child(n + 5) {
         display: none;
@@ -154,70 +195,145 @@
       }
     }
     &__btn-wrap {
-      margin-top: 30px;
+      margin-top: auto;
       .btn--blue {
         box-shadow: 0px 24px 35px -13px #228F9D;
       }
     }
-  }
-}
-@include respond-to(x-medium) {
-  .stocks {
-    &::after {
-      width: 45%;
-      font-size: 45px;
-      line-height: 83.69%;
-      letter-spacing: 0.885em;
-      text-transform: uppercase;
-      max-height: 520px;
-      height: 82%;
-    }
-    &__subtitle {
-      margin-top: 160px;
-      margin-bottom: 70px;
-    }
-    &__list {
-      max-width: 1340px;
-      margin: $center;
-      margin-bottom: 30px;
-    }
-    &__item {
-      width: 33.3%;
-      max-width: 400px;
-      padding: 0;
-      &:nth-child(n + 4) {
-        display: none;
-      }
-    }
-    &__list--all {
-      li:nth-child(n + 4) {
-        display: flex;
-      }
-    }
-    &__img-wrap {
-      max-height: 400px;
-      img {
-        object-fit: cover;
-      }
+    &__text-wrap {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
-@include respond-to(large) {
-  .stocks {
-    &__list {
-      position: relative;
+//@media (min-width: 1300px) {
+  //  .stocks {
+  //    &::after {
+  //      width: 45%;
+  //      font-size: 45px;
+  //      line-height: 83.69%;
+  //      letter-spacing: 0.885em;
+  //      text-transform: uppercase;
+  //      max-height: 502px;
+  //      height: 70%;
+  //    }
+  //    &__subtitle {
+  //      margin-top: 160px;
+  //      margin-bottom: 70px;
+  //    }
+  //    &__list {
+  //      max-width: 1340px;
+  //      margin: $center;
+  //      margin-bottom: 30px;
+  //    }
+  //    &__item {
+  //      width: 33.3%;
+  //      max-width: 400px;
+  //      padding: 0;
+  //      &:nth-child(n + 4) {
+  //        display: none;
+  //      }
+  //    }
+  //    &__list--all {
+  //      li:nth-child(n + 4) {
+  //        display: flex;
+  //      }
+  //    }
+  //    &__img-wrap {
+  //      max-height: 400px;
+  //      img {
+  //        object-fit: cover;
+  //      }
+  //    }
+  //  }
+  //}
+  @include respond-to(large) {
+    .stocks {
+      &::after {
+        width: 45%;
+        font-size: 45px;
+        line-height: 83.69%;
+        letter-spacing: 0.885em;
+        text-transform: uppercase;
+        max-height: 502px;
+        height: 70%;
+      }
 
-      &::before {
-        @include pseudo();
-        position: absolute;
-        width: 271px;
-        height: 271px;
-        border: 1px solid #228F9D;
-        border-radius: 50%;
-        top: 20px;
-        left: -160px;
-        z-index: 10;
+      &__subtitle {
+        margin-top: 160px;
+        margin-bottom: 70px;
+      }
+
+      &__list {
+        max-width: 1340px;
+        margin: $center;
+        margin-bottom: 30px;
+        justify-content: space-between;
+        &--all {
+          grid-gap: 40px;
+          li {
+            width: auto;
+          }
+        }
+      }
+
+      &__item {
+        width: 33.3%;
+        max-width: 400px;
+        padding: 0;
+
+        &:nth-child(n + 4) {
+          display: none;
+        }
+      }
+
+      &__list--all {
+        li:nth-child(n + 4) {
+          display: flex;
+        }
+      }
+
+      &__img-wrap {
+        max-height: 400px;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &__list {
+        position: relative;
+
+        &::before {
+          @include pseudo();
+          position: absolute;
+          width: 271px;
+          height: 271px;
+          border: 1px solid #228F9D;
+          border-radius: 50%;
+          top: 20px;
+          left: -160px;
+          z-index: 10;
+        }
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: block;
+        width: 120px;
+        height: 67px;
+      }
+      .swiper-button-prev {
+        background: url("../img/prev-arrow.svg") center center / contain no-repeat;
+      }
+      .swiper-button-next{
+        background: url("../img/next-arrow.svg") center center / contain no-repeat;
+      }
+      .swiper-button-prev:after,
+      .swiper-button-next:after {
+        content: "";
+        font-size: 0;
       }
     }
   }
-}

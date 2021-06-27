@@ -4,7 +4,9 @@
   margin: $center;
 
   &__title {
-
+&::after {
+  content: none;
+}
   }
 
   &__form {
@@ -110,7 +112,8 @@
   .application {
     padding: 0 46px;
     &__title {
-      display: none;
+      //display: none;
+      text-align: left;
     }
     &__form {
       display: flex;
