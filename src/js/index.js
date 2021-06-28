@@ -1,5 +1,5 @@
 import '@/scss/index.scss';
-import 'lightgallery.js/docs/js/lightgallery.min.js'
+import 'lightgallery.js/dist/js/lightgallery.min.js'
 import './navigation';
 
 import IMask from 'imask';
