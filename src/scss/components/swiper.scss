@@ -1,4 +1,5 @@
-.about {
+.about,
+.services-about {
   .swiper-container {
     width: 100%;
     height: 100%;
@@ -90,7 +91,7 @@
   opacity: 1;
 }
 @include respond-to(medium) {
-  .about {
+  .about, .services-about {
     .swiper-slide {
       width: 710px;
       height: 440px;
@@ -124,7 +125,7 @@
 
 
 @include respond-to(large) {
-  .about {
+  .about, .services-about {
     .swiper-button-next,
     .swiper-button-prev {
       display: block;
@@ -141,12 +142,16 @@
       }
     }
     .swiper-button-next {
-      left: 65%;
-      right: auto;
+      @media (min-width: 1900px) {
+        left: 65%;
+        right: auto;
+      }
     }
     .swiper-button-prev {
-      left: 33%;
-      right: auto;
+      @media (min-width: 1900px) {
+        left: 33%;
+        right: auto;
+      }
     }
   }
   .reviews .swiper-container {

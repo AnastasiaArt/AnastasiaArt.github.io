@@ -1,69 +1,103 @@
 .filter-services {
-  width: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+
   .ss-multi-selected {
     border: none;
-    &::after {
-      content: "Специальность";
-      width: 200px;
-      height: 40px;
-    };
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+  //  &::after {
+  //    content: "Специальность";
+  //    width: 200px;
+  //    height: 40px;
+  //  };
+  //}
+  //.ss-values {
+  //  position: absolute;
+  //  bottom: -50px;
+  //  .ss-disabled {
+  //    display: none!important;
+  //  }
   }
-  .ss-values {
-    position: absolute;
-    bottom: -50px;
-    .ss-disabled {
-      display: none!important;
-    }
+  .ss-disabled {
+    color: $gray!important;
   }
 }
 .filter-experts {
-  width: 250px;
-  margin-left: 30px;
-  margin-right: auto;
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 15px;
   .ss-multi-selected {
     border: none;
-    &::after {
-      content: "Направление";
-      width: 200px;
-      height: 40px;
-    };
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+  //  &::after {
+  //    content: "Направление";
+  //    width: 200px;
+  //    height: 40px;
+  //  };
+  //}
+  //.ss-values {
+  //  position: absolute;
+  //  bottom: -100px;
+  //  left: -280px;
+  //  .ss-disabled {
+  //    display: none!important;
+  //  }
   }
-  .ss-values {
-    position: absolute;
-    bottom: -100px;
-    left: -280px;
-    .ss-disabled {
-      display: none!important;
-    }
+  .ss-disabled {
+    color: $gray!important;
   }
 }
 .filters {
-  border-bottom: 0.5px solid #BDBDBD;
+  //border-bottom: 0.5px solid #BDBDBD;
   display: flex;
   width: 100%;
   justify-content: space-between;
   position: relative;
+  flex-wrap: wrap;
 
-  &::after {
-    @include pseudo();
-    content: 'Л';
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    z-index: 10;
-    top: 5px;
-
-  }
+  //&::after {
+  //  @include pseudo();
+  //  content: 'Л';
+  //  right: 10px;
+  //  width: 50px;
+  //  height: 50px;
+  //  z-index: 10;
+  //  top: 5px;
+  //
+  //}
   .search {
-    border: none;
+    border:none;
+    border-bottom: 1px solid $gray;
     padding-right: 50px;
     max-width: 350px;
+    order: -1;
+    width: 100%;
+    outline: none;
+    margin-bottom: 15px;
+
+    &:focus, &:hover, &:active {
+      border-bottom: 1px solid $blue;
+    }
+  }
+  &__open {
+    position: absolute;
+    transform-origin: 0 0;
+    right: -40px;
+    top: 50%;
+    transform: rotate(270deg) translate(-50%,-50%);
+    text-align: center;
+  }
+  select {
+    border:none;
+    border-bottom: 1px solid $blue;
+    margin-bottom: 15px;
   }
 }
 .experts {
   .sort {
     margin-top: 10px;
-    margin-bottom: 30px;
     margin-left: auto;
     border: 1px solid #228F9D;
     border-radius: 52px;
@@ -73,5 +107,146 @@
     padding: 7px 12px;
     background: none;
     letter-spacing: 0.095em;
+  }
+  &--filters {
+    &::after{
+      content: none;
+    }
+  }
+}
+
+.filters-wrap {
+  width: 280px;
+  position: absolute;
+  left: -240px;
+  top: 140px;
+  transition: left 0.5s ease-in-out;
+  z-index: 100;
+  background: rgba(255, 255, 255, 1);
+  padding: 20px 40px 20px 20px;
+  border-radius: 20px;
+
+  &:focus,
+  &:hover,
+  &:active {
+    left: 0;
+  }
+}
+
+@include  respond-to(medium) {
+  .filters-wrap {
+    position: relative;
+    width: 100%;
+    top: auto;
+    left: 0;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    flex-grow: 1;
+  }
+  .filter-services {
+    width: 250px;
+    margin-bottom: 0;
+
+    .ss-multi-selected {
+      border: none;
+        &::after {
+          content: "Специальность";
+          width: 200px;
+          height: 40px;
+        };
+      }
+      .ss-values {
+        position: absolute;
+        bottom: -50px;
+        width: calc(100vw - 300px)!important;
+        overflow: auto;
+        .ss-disabled {
+          display: none!important;
+        }
+        .ss-value {
+          background: #EEEEEE!important;
+          border-radius: 52px!important;
+          font-size: 14px!important;
+          line-height: 136.19%!important;
+          letter-spacing: 0.095em!important;
+          color: #484848!important;
+          padding: 7px 10px!important;
+        }
+    }
+    .ss-disabled {
+      display: none;
+    }
+  }
+  .filter-experts {
+    width: 250px;
+    margin-left: 15px;
+    margin-bottom: 0;
+    flex-grow: 1;
+    .ss-multi-selected {
+      border: none;
+
+        &::after {
+          content: "Направление";
+          width: 200px;
+          height: 40px;
+        };
+      }
+      .ss-values {
+        position: absolute;
+        bottom: -100px;
+        left: -260px;
+        width: calc(100vw - 240px)!important;
+        overflow: auto;
+        .ss-disabled {
+          display: none!important;
+        }
+        .ss-value {
+          background: #EEEEEE!important;
+          border-radius: 52px!important;
+          font-size: 14px!important;
+          line-height: 136.19%!important;
+          letter-spacing: 0.095em!important;
+          color: #484848!important;
+          padding: 7px 10px!important;
+        }
+    }
+    .ss-disabled {
+      display: none;
+    }
+  }
+  .filters {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    border-bottom: 0.5px solid #BDBDBD;
+    margin-bottom: 100px;
+
+    &__open {
+      display: none;
+    }
+    .search {
+      order: 1;
+      margin-left: auto;
+      width: auto;
+      border-bottom: none;
+      text-align: right;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 136.19%;
+      letter-spacing: 0.16em;
+      color: #484848;
+      padding-right: 0;
+      flex-shrink: 2;
+      &:focus, &:hover, &:active {
+        border-bottom: none;
+      }
+    }
+  }
+  .experts {
+    .sort {
+      margin-top: -80px;
+      margin-bottom: 80px;
+    }
   }
 }

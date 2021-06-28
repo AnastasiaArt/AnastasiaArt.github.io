@@ -3,11 +3,32 @@
   max-width: 1350px;
 }
 }
-
+.pediatr-about {
+  &::before {
+    top: 30%;
+  }
+  .about__text {
+    margin-bottom: 50px;
+  }
+}
+.pediatr {
+  .about {
+    &__subtitle {
+      margin-top: 50px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+}
 .pediatr-services {
   text-align: right;
   max-width: 1380px;
   margin: $center;
+  margin-top: 30px;
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 
   &__filters {
     display: flex;
@@ -20,11 +41,96 @@
       margin-left: auto;
       margin-top: 15px;
       border: none;
+      text-align: right;
     }
   }
   &__list {
     width: 100%;
     align-items: center;
     text-align: center;
+  }
+}
+
+@include respond-to(medium) {
+  .pediatr {
+   .about {
+     &__subtitle {
+       font-size: 21px;
+       line-height: 136.19%;
+       letter-spacing: 0.195em;
+       text-transform: uppercase;
+       color: #404040;
+       margin-bottom: 50px;
+       text-align: center;
+     }
+     &__text {
+       margin-bottom: 145px;
+     }
+   }
+    .experts {
+      &::after {
+        content: none;
+      }
+      .stocks__btn-wrap {
+        margin-top: auto!important;
+      }
+    }
+  }
+  .pediatr-about {
+    &::before {
+      height: 160px;
+    }
+  }
+  .pediatr-services {
+    .container {
+      width: 100%;
+      padding: 20px;
+    }
+
+    &__filters {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__list {
+      width: auto;
+
+      button {
+        padding: 7px 12px;
+      }
+    }
+
+    .list {
+      margin-top: 0;
+
+      tr > td {
+        font-size: 16px;
+        line-height: 157.19%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+  }
+}
+@include respond-to(large) {
+  .pediatr-about {
+    padding-top: 120px;
+    &::before {
+      top: 50px;
+    }
+    .about__subtitle {
+      font-size: 24px;
+      line-height: 136.19%;
+      letter-spacing: 0.195em;
+      text-transform: uppercase;
+      color: #404040;
+      content: "";
+    }
+  }
+  .pediatr {
+    .experts__list--all {
+      height: auto !important;
+      margin-bottom: 0;
+    }
   }
 }

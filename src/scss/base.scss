@@ -1,13 +1,12 @@
 
 @include font-face("CenturyGothic", "../fonts/CenturyGothic", 400, normal);
 @include font-face("CenturyGothicBold", "../fonts/CenturyGothic-Bold", 700, normal);
+@include font-face("BebasNeue", "../fonts/BebasNeue-Regular", 400, normal);
+@include font-face("BebasNeueBold", "../fonts/BebasNeue-bold", 700, normal);
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-  //font-family: 'Bebas Neue', cursive;
 
-  //font-family: 'Philosopher', sans-serif;
 html {
   @include font-style(14px, 19px, 300);
   letter-spacing: 0.01em;
@@ -92,6 +91,12 @@ textarea {
     bottom: -12px;
     transform: translateX(-50%);
     border:  0.5px solid #228F9D;
+  }
+}
+.services-about {
+  padding: 40px 0;
+  &__subtitle {
+    margin-bottom: 50px;
   }
 }
 

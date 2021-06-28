@@ -8,7 +8,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
-    <title>JS Excel</title>
+    <link rel="stylesheet" href="lightgallery/dist/css/lightgallery.min.css" type="text/css">
+    <link rel="stylesheet" href="lightgallery/dist/css/lg-transitions.min.css" type="text/css">
+    <link rel="stylesheet" href="lightgallery/tingle.min.css" type="text/css">
+    <title>NOVAVITA</title>
     <style>
     </style>
 </head>
@@ -31,11 +34,11 @@
             <button class="main-nav__button" type="button" aria-label="Открыть меню"></button>
             <nav class="main-nav main-nav--closed main-nav-nojs">
                 <ul class="main-nav__list">
-                    <li class="main-nav__item"><a class="main-nav__link main-nav__link--current" href="services.html">Направления и
+                    <li class="main-nav__item"><a class="main-nav__link main-nav__link--current" href="services.html" >Направления и
                         услуги</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="experts.html">Специалисты</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="/">Акции</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="/">Контакты</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="promotions.html">Акции</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
                 <div class="main-nav__btn--call-wrap">
                     <span>+7 (812) 386-2002</span>
@@ -55,73 +58,73 @@
     <section class="services-intro">
         <div class="services-intro__wrap">
             <h1 class="services-intro__title">Наши услуги</h1>
-            <p class="services-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            <p class="services-intro__text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="services-intro__img"></div>
     </section>
     <section class="services-page">
-        <input class="search" placeholder="Search" />
-        <button type="button" class="services-page btn btn--gray-border" id="downloadPrice">Полный прайс-лист</button>
+<!--        <input class="search" placeholder="Search" />-->
+        <button type="button" class="services-page__btn btn btn--blue-border" id="downloadPrice">Полный прайс-лист</button>
         <ul class="services-page__list">
             <li>
-                <a href="pediatrics.html" class="services-page__item">
+                <a href="pediatrics.html" class="services-page__item" style="background: url('img/services/service-2.jpg') center center / cover no-repeat;">
                   <div class="services-page__title">Педиатрия</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item " style="background: url('img/services/service-1.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Программа ведения беременности</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item" style="background: url('img/services/service-6.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Маммология</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item" style="background: url('img/services/service-3.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Урология</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item" style="background: url('img/services/service-4.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Терапия - эндокринология </div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
-                    <div class="services-page__title">отоларинтология</div>
+                <a href="#" class="services-page__item" style="background: url('img/services/service-5.jpg') center center / cover no-repeat;">
+                    <div class="services-page__title">Отоларинтология</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item" style="background: url('img/services/service-7.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Проктологияи</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item" style="background: url('img/services/service-8.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Флебология</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item" style="background: url('img/services/service-9.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Малоинвазивные операции</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item" style="background: url('img/services/service-10.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Вакцинации</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item" style="background: url('img/services/service-11.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Массажи</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="services-page__item">
+                <a href="#" class="services-page__item" style="background: url('img/services/service-12.jpg') center center / cover no-repeat;">
                     <div class="services-page__title">Офтальмология</div>
                 </a>
             </li>
@@ -186,12 +189,12 @@
     <section class="services-about">
         <h3 class="services-about__subtitle subtitle">Клиника</h3>
         <div class="swiper-container mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/about-slider.png"></div>
-                <div class="swiper-slide"><img src="img/about-slider.png"></div>
-                <div class="swiper-slide"><img src="img/about-slider.png"></div>
-                <div class="swiper-slide"><img src="img/about-slider.png"></div>
-                <div class="swiper-slide"><img src="img/about-slider.png"></div>
+            <div class="swiper-wrapper"  id="lightgallery">
+                <a href="img/pageindex/about-2-lg.jpg" class="swiper-slide"> <img src="img/pageindex/about-2-lg.jpg"></a>
+                <a href="img/pageindex/about-3-lg.jpg" class="swiper-slide"> <img src="img/pageindex/about-3-lg.jpg"></a>
+                <a href="img/pageindex/about-4-lg.jpg" class="swiper-slide"><img src="img/pageindex/about-4-lg.jpg"></a>
+                <a href="img/pageindex/about-5-lg.jpg" class="swiper-slide"> <img src="img/pageindex/about-5-lg.jpg"></a>
+                <a href="img/pageindex/about-6-lg.jpg" class="swiper-slide"><img src="img/pageindex/about-6-lg.jpg"></a>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -253,7 +256,7 @@
         <div class="main-footer__col main-footer__col--departments">
             <h4>Направления</h4>
             <ul>
-                <li><a class="" href="/">Педиатрия</a></li>
+                <li><a class="" href="pediatrics.html">Педиатрия</a></li>
                 <li><a class="" href="/">Отоларинтология</a></li>
                 <li><a class="" href="/">Ведение беременности и гинекология</a></li>
                 <li><a class="" href="/">Малоинвазивные операции</a></li>
@@ -318,14 +321,18 @@
 </footer>
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-
+<script src="lightgallery/dist/js/lightgallery.js" ></script>
+<script src="lightgallery/tingle.min.js" ></script>
 
 <!-- Initialize Swiper -->
 <script>
+    lightGallery(document.getElementById('lightgallery'), {
+        mode: 'lg-fade'
+    });
     let swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         spaceBetween: 30,
-
+        slideToClickedSlide: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -335,8 +342,8 @@
                 slidesPerView: 3,
                 spaceBetween: 50,
             },
-        },
-    })
+        }
+    });
     let galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 20,
         slidesPerView: 1,

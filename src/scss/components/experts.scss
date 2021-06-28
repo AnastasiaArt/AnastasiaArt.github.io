@@ -123,6 +123,9 @@
   .btn--all-experts {
     max-width: 230px!important;
   }
+  &--filters {
+    position: relative;
+  }
 }
 
 @include respond-to(medium) {
@@ -364,7 +367,7 @@
     &__list--filtered {
       display: block;
       width: 40%;
-      height: 1200px;
+      height: 1150px;
       padding-right: 20px;
       .stocks__item {
         flex: none!important;
@@ -387,7 +390,7 @@
 
     &__list--all {
       overflow: auto;
-      height: 1200px;
+      height: 1100px;
       grid-gap: 1.5em;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       .stocks__item {

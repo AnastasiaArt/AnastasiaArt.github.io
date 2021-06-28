@@ -1,0 +1,209 @@
+.legal-page {
+  position: relative;
+}
+.legals {
+  padding: 0 16px;
+  width: 100%;
+  position: relative;
+  &::after {
+    @include pseudo();
+    width: 70px;
+    height: 100px;
+    right: 0;
+    top: 0;
+    background: #515151
+  }
+&__title {
+  font-family: "BebasNeueBold", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 108.19%;
+  letter-spacing: 0.395em;
+  text-transform: uppercase;
+  color: #D3D3D3;
+  width: 80%;
+  position: relative;
+  padding: 15px 0;
+  text-align: left;
+  span {
+    color: $blue;
+  }
+  &::after {
+    @include pseudo();
+    width: 42px;
+    height: 42px;
+    right: -25px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #3B939C;
+    box-shadow: 0px 17px 21px -1px rgba(34, 143, 157, 0.57);
+    z-index: 10;
+  }
+}
+  &__list {
+    @include list();
+    width: 100vw;
+    margin-left: -16px;
+    a {
+      width: 100%;
+      display: block;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 144.69%;
+      letter-spacing: 0.05em;
+      color: #717171;
+      padding: 15px 25px;
+      background: #F5F4F1;
+      text-decoration: none;
+      text-align: left;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+  }
+  &-text {
+    padding: 16px;
+    text-align: left;
+    h3 {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 136.19%;
+      letter-spacing: 0.075em;
+      color: #585858
+    }
+    p {
+      font-size: 12px;
+      line-height: 136.19%;
+      letter-spacing: 0.075em;
+      color: #585858
+    }
+  }
+  &__qr {
+    background: #F5F4F1;
+    width: 100%;
+    display: flex;
+    padding: 0 16px;
+    align-items: center;
+    margin-bottom: 35px;
+    span {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 136.19%;
+      letter-spacing: 0.075em;
+      color: #4A4A4A;
+      padding-left: 22px;
+      text-align: left;
+    }
+  }
+}
+@include respond-to(medium) {
+  .legals {
+    padding: 0 30px;
+    padding-right: 12%;
+    padding-left: 0;
+    &::after {
+      width: 85px;
+      height: 431px;
+      top: 75px;
+    }
+    &::before {
+      @include pseudo();
+      width: 219px;
+      height: 299px;
+      top: 100px;
+      right: -20px;
+      background: url("../img/legals/intro.jpg") center center / cover no-repeat;
+      z-index: 10;
+    }
+    &__title {
+      &::after {
+        width: 53px;
+        height: 53px;
+      }
+    }
+    &__list {
+      width: 80%;
+      a {
+        font-size: 16px;
+        line-height: 144.19%;
+        letter-spacing: 0.08em;
+        padding: 22px 25px;
+      }
+    }
+    &-text {
+      p, h3 {
+        font-size: 16px;
+        line-height: 136.19%;
+        letter-spacing: 0.075em;
+      }
+    }
+    &__qr {
+      justify-content: center;
+      img {
+        width: 163px;
+        height: 163px;
+      }
+      span {
+        max-width: 210px;
+      }
+    }
+  }
+}
+
+@include respond-to(large) {
+  .legals {
+    max-width: 1520px;
+    margin: $center;
+
+    &::before {
+      width: 319px;
+      height: 436px;
+      right: 50px;
+    }
+    &::after {
+      width: 511px;
+      height: 525px;
+      right: calc((1520px - 100vw) /2);
+    }
+    &__title {
+      font-size: 55px;
+      line-height: 115.69%;
+      letter-spacing: 0.395em;
+      padding-left: 0;
+      &::after {
+        width: 79px;
+        height: 79px;
+        bottom: -179px;
+        transform: none;
+        right: -79px;
+      }
+    }
+    &__list {
+      width: 70%;
+      margin-left: 0;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+    &-text {
+      max-width: 1520px;
+      margin: $center;
+      padding: 60px 0;
+      padding-right: calc(1520px - 1250px);
+    }
+    &__qr {
+      position: absolute;
+      top: 55%;
+      right: 0;
+      width: 350px;
+      justify-content: flex-start;
+      padding: 0;
+      img {
+        width: 181px;
+        height: 181px;
+      }
+    }
+  }
+}

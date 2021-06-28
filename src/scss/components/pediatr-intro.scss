@@ -1,0 +1,126 @@
+.pediatr-intro {
+  width: 95%;
+  padding-left: 50px;
+  position: relative;
+  &::after {
+    @include pseudo();
+    width: 70px;
+    height: 150px;
+    background: url("../img/units/intro-left-serv.svg") center center / cover no-repeat;
+    left: 0;
+    top: 60px;
+    z-index: 2;
+  }
+  &__wrap {
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    padding: 20px 20px 30px 10px;
+    text-align: left;
+  }
+   &__subtitle {
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 107.19%;
+      letter-spacing: 0.395em;
+      text-transform: uppercase;
+      font-family: 'BebasNeueBold', sans-serif;
+    }
+
+  &__img {
+    margin-top: -30px;
+    background: url("../img/experts/expert-intro-md.jpg") center center / cover no-repeat;
+    width: 100vw;
+    height: 56vw;
+    position: relative;
+    z-index: -1;
+
+    &::before {
+      @include pseudo();
+      width: 42px;
+      height: 42px;
+      left: -21px;
+      border-radius: 50%;
+      top: 50%;
+      background: #3B939C;
+      box-shadow: 0px 17px 21px -1px rgba(34, 143, 157, 0.57);
+      z-index: 10;
+    }
+  }
+  button {
+    display: none;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 136.19%;
+    letter-spacing: 0.01em;
+  }
+}
+@include respond-to(medium) {
+  .pediatr-intro {
+    width: 100%;
+    &::after {
+      @include pseudo();
+      width: 150px;
+      height: 400px;
+    }
+    &__subtitle {
+      font-size: 45px;
+      line-height: 107.19%;
+    }
+    &__text {
+      font-size: 16px;
+      color: #494949;
+    }
+    &__wrap {
+      width: 80%;
+      margin-left: auto;
+      padding-right: 10%;
+    }
+    &__img {
+      width: 80%;
+      margin-left: auto;
+      margin-top: 0;
+      margin-bottom: 70px;
+      max-height: 573px;
+      &::before {
+        width: 75px;
+        height: 75px;
+        left: -38px;
+      }
+    }
+  }
+}
+@include respond-to(large) {
+    .pediatr-intro {
+      padding-left: 15%;
+      display: flex;
+      align-items: center;
+      &::after {
+        width: 200px;
+        height: 600px;
+        top: -50px;
+      }
+      &__wrap {
+        width: 40%;
+        padding-right: 20px;
+        max-width: 570px;
+        text-align: left;
+        background: none;
+      }
+      &__img {
+        max-width: 1015px;
+        margin-bottom: 0;
+      }
+      &__subtitle {
+        font-size: 50px;
+        line-height: 135.19%;
+        letter-spacing: 0.33em;
+        text-transform: uppercase;
+        color: #4D4D4D;
+        margin-bottom: 30px;
+      }
+      button {
+      margin-top: 40px;
+      }
+    }
+}

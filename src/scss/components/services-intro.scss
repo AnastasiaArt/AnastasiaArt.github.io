@@ -1,0 +1,101 @@
+.services-intro {
+  position: relative;
+
+  &::before {
+    @include pseudo();
+    top: 10%;
+    left: 0;
+    background: url("../img/services/intro-left.svg") center center / cover no-repeat;
+    z-index: 100;
+    width: 50px;
+    height: 240px;
+  }
+  &__img {
+    margin-top: -30px;
+    background: url("../img/services/intro-md.jpg") center center / cover no-repeat;
+    width: 100vw;
+    height: 56vw;
+    position: relative;
+    z-index: -1;
+  }
+  &__wrap {
+    width: 80%;
+    min-width: 304px;
+    max-width: 850px;
+    padding: 30px;
+    padding-left: 60px;
+    padding-right: 2%;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: left;
+  }
+  &__title {
+    font-family: 'BebasNeueBold', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 111.69%;
+    letter-spacing: 0.395em;
+    text-transform: uppercase;
+    color: #686868;
+  }
+  &__text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 136.19%;
+    letter-spacing: 0.01em;
+    color: #686868;
+  }
+}
+
+@include respond-to(medium) {
+  .services-intro {
+    &::before {
+      width: 100px;
+      height: 400px;
+      top: 30%;
+    }
+    &__title {
+      font-size: 45px;
+      line-height: 135.19%;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    &__wrap {
+      padding: 55px;
+      padding-left: 12%;
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__img {
+      margin-top: -70px;
+    }
+  }
+}
+
+@include respond-to(x-medium) {
+  .services-intro {
+    &::after {
+      @include pseudo();
+      background: url("../img/services/intro-right.svg") center center / cover no-repeat;
+      z-index: 100;
+      width: 90px;
+      height: 400px;
+      right: -10px;
+      top: 70%;
+    }
+    &__wrap {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__img {
+      margin-top: -30px;
+      background: url("../img/services/intro-xl.jpg") center center / cover no-repeat;
+      width: 100vw;
+      height: 40vw;
+      max-height: 569px;
+      position: relative;
+      z-index: -1;
+    }
+  }
+}

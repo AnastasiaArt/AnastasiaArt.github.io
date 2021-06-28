@@ -6,7 +6,7 @@
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 5px 44px -10px rgba(147, 117, 95, 0.38);
     border-radius: 9px;
-    width: 309px;
+    //width: 309px;
     margin: $center;
     margin-bottom: 10px;
     padding: 30px;
@@ -26,16 +26,39 @@
     letter-spacing: 0.01em;
     color: #353535;
   }
+  &__title {
+    margin-bottom: 30px;
+  }
 }
 @include respond-to(medium) {
   .features {
     &__list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
+      position: relative;
+      &::before {
+      @include pseudo();
+      width: 100vw;
+        min-width: 1800px;
+      height: 500px;
+      background: url("../img/pageindex/wave-word.png") center center / cover no-repeat;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 10%;
+      z-index: -1;
+    }
     }
     &__item {
       margin: 20px;
+      width: 40%;
+      flex-grow: 1;
+    }
+    &__subtitle {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 154.19%;
+      letter-spacing: 0.06em;
     }
   }
 }
@@ -44,9 +67,13 @@
     &__list {
       flex-wrap: nowrap;
       justify-content: space-between;
+      &::before {
+        bottom: -10%;
+      }
     }
     &__item {
       margin: 0;
+      max-width: 310px;
     }
   }
 }

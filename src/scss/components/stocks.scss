@@ -140,7 +140,7 @@
       content: 'promotions' !important;
       writing-mode: vertical-rl;
       z-index: -1;
-      font-family: Bebas Neue;
+      font-family: 'BebasNeueBold', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 20px;
@@ -207,49 +207,22 @@
     }
   }
 }
-//@media (min-width: 1300px) {
-  //  .stocks {
-  //    &::after {
-  //      width: 45%;
-  //      font-size: 45px;
-  //      line-height: 83.69%;
-  //      letter-spacing: 0.885em;
-  //      text-transform: uppercase;
-  //      max-height: 502px;
-  //      height: 70%;
-  //    }
-  //    &__subtitle {
-  //      margin-top: 160px;
-  //      margin-bottom: 70px;
-  //    }
-  //    &__list {
-  //      max-width: 1340px;
-  //      margin: $center;
-  //      margin-bottom: 30px;
-  //    }
-  //    &__item {
-  //      width: 33.3%;
-  //      max-width: 400px;
-  //      padding: 0;
-  //      &:nth-child(n + 4) {
-  //        display: none;
-  //      }
-  //    }
-  //    &__list--all {
-  //      li:nth-child(n + 4) {
-  //        display: flex;
-  //      }
-  //    }
-  //    &__img-wrap {
-  //      max-height: 400px;
-  //      img {
-  //        object-fit: cover;
-  //      }
-  //    }
-  //  }
-  //}
+
   @include respond-to(large) {
     .stocks {
+
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 271px;
+        height: 271px;
+        border: 1px solid #228F9D;
+        border-radius: 50%;
+        top: 50%;
+        left: -200px;
+        z-index: 10;
+      }
       &::after {
         width: 45%;
         font-size: 45px;
@@ -302,33 +275,19 @@
         }
       }
 
-      &__list {
-        position: relative;
-
-        &::before {
-          @include pseudo();
-          position: absolute;
-          width: 271px;
-          height: 271px;
-          border: 1px solid #228F9D;
-          border-radius: 50%;
-          top: 20px;
-          left: -160px;
-          z-index: 10;
-        }
-      }
-
       .swiper-button-next,
       .swiper-button-prev {
         display: block;
-        width: 120px;
+        width: 98px;
         height: 67px;
       }
       .swiper-button-prev {
-        background: url("../img/prev-arrow.svg") center center / contain no-repeat;
+        background: url("../img/pageindex/about-left.svg") center center / contain no-repeat;
+        left: calc(((100vw - 1340px) / 2) - 150px);
       }
       .swiper-button-next{
-        background: url("../img/next-arrow.svg") center center / contain no-repeat;
+        background: url("../img/pageindex/about-right.svg") center center / contain no-repeat;
+        right: calc(((100vw - 1340px) / 2) - 150px);
       }
       .swiper-button-prev:after,
       .swiper-button-next:after {
@@ -337,3 +296,4 @@
       }
     }
   }
+

@@ -4,3 +4,10 @@
     width: 92% !important;
   }
 }
+@include respond-to(medium) {
+  .experts-page {
+    .experts__list li .stocks__btn-wrap {
+      margin-top: auto;
+    }
+  }
+}
