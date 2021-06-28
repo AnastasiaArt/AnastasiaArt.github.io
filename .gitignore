@@ -1,6 +1,5 @@
 node-modules
 .gitignore
 .idea
-dist
 .eslintignore
 .eslintrc.js
