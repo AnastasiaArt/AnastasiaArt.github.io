@@ -54,17 +54,17 @@
    li {
      &:nth-child(2) {
        .services__img {
-         background: url("../img/pageindex/services-2-xs.jpg") center center / cover no-repeat;
+         background: url("../img/pageindex/services-3-xs.jpg") center center / cover no-repeat;
        }
      }
      &:nth-child(3) {
        .services__img {
-         background: url("../img/pageindex/services-3-xs.jpg") center center / cover no-repeat;
+         background: url("../img/pageindex/services-4-xs.jpg") center center / cover no-repeat;
        }
      }
      &:nth-child(4) {
        .services__img {
-         background: url("../img/pageindex/services-4-xs.jpg") center center / cover no-repeat;
+         background: url("../img/pageindex/services-2-xs.jpg") center center / cover no-repeat;
        }
      }
    }
@@ -117,7 +117,7 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
-      background: url("../img/pageindex/services-4-md.jpg") center center / cover no-repeat;
+      background: url("../img/pageindex/services-1-black-md.jpg") center center / cover no-repeat;
     }
     &__item {
       width: 100%;
@@ -137,28 +137,36 @@
         &:nth-child(1) {
             grid-row: span 4;
           .services__item {
+
+            &:hover,
+            &:active  {
+              .services__img {
+                background: url("../img/pageindex/services-1-md.jpg") center center / cover no-repeat;
+              }
+            }
             //height: 90%;
           }
         }
         &:nth-child(2) {
           grid-row: span 2;
           .services__img {
-            background: url("../img/pageindex/services-2-md.jpg") center center / cover no-repeat;
+            background: url("../img/pageindex/services-3-md.jpg") center center / cover no-repeat;
           }
         }
         &:nth-child(3) {
-            grid-row: span 4;
+            grid-row: span 3;
+            order:1;
           .services__item {
             //height: 90%;
           }
           .services__img {
-            background: url("../img/pageindex/services-3-md.jpg") center center / cover no-repeat;
+            background: url("../img/pageindex/services-4-md.jpg") center center / cover no-repeat;
           }
           }
         &:nth-child(4) {
-          grid-row: span 3;
+          grid-row: span 4;
           .services__img {
-            background: url("../img/pageindex/services-4-md.jpg") center center / cover no-repeat;
+            background: url("../img/pageindex/services-2-md.jpg") center center / cover no-repeat;
           }
         }
       }
@@ -184,33 +192,51 @@
     position: relative;
     &::before {
       font-size: 400px;
+      left: -280px;
+      top: 320px;
+    }
+    &::after {
+      font-size: 400px;
+      left: -280px;
+      top: 320px;
     }
 
     &__img {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
-      background: url("../img/pageindex/services-1-lg.jpg") center center / cover no-repeat;
+      background: url("../img/pageindex/services-1-black-lg.jpg") center center / cover no-repeat;
     }
 
     &__list {
       grid-column-gap: 30px;
       grid-row-gap: 30px;
       li {
-        &:nth-child(2) {
-          .services__img {
-            background: url("../img/pageindex/services-2-lg.jpg") center center / cover no-repeat;
+        &:nth-child(1) {
+          grid-row: span 4;
+          .services__item {
+            &:hover,
+            &:active {
+              .services__img {
+                background: url("../img/pageindex/services-1-lg.jpg") center center / cover no-repeat;
+              }
+            }
           }
         }
-
-        &:nth-child(3) {
+        &:nth-child(2) {
           .services__img {
             background: url("../img/pageindex/services-3-lg.jpg") center center / cover no-repeat;
           }
         }
 
-        &:nth-child(4) {
+        &:nth-child(3) {
           .services__img {
             background: url("../img/pageindex/services-4-lg.jpg") center center / cover no-repeat;
+          }
+        }
+
+        &:nth-child(4) {
+          .services__img {
+            background: url("../img/pageindex/services-2-lg.jpg") center center / cover no-repeat;
           }
         }
       }

@@ -39,7 +39,7 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 166.19%;
-    letter-spacing: 0.61em;
+    letter-spacing: 0.49em;
     text-transform: uppercase;
   }
 
@@ -74,6 +74,7 @@
       font-size: 15px;
       line-height: 136.19%;
       letter-spacing: 0.845em;
+      padding-right: 10px;
     }
     &__text {
       font-size: 20px;
@@ -99,7 +100,7 @@
     }
     &__subtitle {
       font-size: 16px;
-      letter-spacing: 1.155em;
+      letter-spacing: 1.05em;
     }
     &__text {
       font-size: 16px;
@@ -119,6 +120,6 @@
 }
 @include respond-to(x-large) {
   .intro {
-    background: url("../img/pageindex/1-2560.jpg") center center / cover no-repeat;
+    background: url("../img/pageindex/1-2560.jpg") bottom center / cover no-repeat;
   }
 }
