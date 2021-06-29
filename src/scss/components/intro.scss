@@ -107,16 +107,16 @@
     background: url("../img/pageindex/1-1920.jpg") top center / cover no-repeat;
     background-position: 50% 70%;
     &::after {
-      width: 813px;
-      height: 719px;
+      width: 600px;
+      height: 519px;
       bottom: -100px;
     }
     &::before {
       @include pseudo();
       left: 0;
       width: auto;
-      min-width: 136px;
-      min-height: 586px;
+      //min-width: 136px;
+      //min-height: 586px;
       top: -40px;
     }
     &__title {
