@@ -949,18 +949,21 @@
     // });
 
     let swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         spaceBetween: 30,
+        loop: true,
+        loopedSlides: 5, //lo
+        // slidesPerView: "auto",
+        // spaceBetween: 30,
         slideToClickedSlide: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-            1900: {
-
-                slidesPerView: 3,
-                spaceBetween: 50,
+            1200: {
+                slidesPerView: "auto",
+                centeredSlides: true,
             },
         },
     })

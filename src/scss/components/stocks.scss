@@ -188,12 +188,19 @@
       &:nth-child(n + 5) {
         display: none;
       }
+      @media (min-width: 1366px) {
+        flex: 0 0 33%;
+        &:nth-child(n + 4) {
+          display: none;
+        }
+      }
     }
     &__list--all {
       li:nth-child(n + 5) {
         display: flex;
       }
     }
+
     &__btn-wrap {
       margin-top: auto;
       .btn--blue {
