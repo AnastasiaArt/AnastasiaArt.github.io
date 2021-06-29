@@ -61,6 +61,16 @@
   .intro {
     background: url("../img/pageindex/1-768.jpg") center center / cover no-repeat;
     height: calc(100vh - 100px);
+    &::before {
+      @include pseudo();
+      left: 0;
+      width: auto;
+      min-width: 80px;
+      min-height: 436px;
+      top: -40px;
+      background: url("../img/pageindex/intro-left.png") center center / contain no-repeat;
+      z-index: 100;
+    }
     &::after {
       width: 530px;
       height: 424px;
@@ -87,12 +97,27 @@
   }
 }
 @include respond-to(large) {
+  .index {
+    .services__title {
+      margin-top: 0;
+    }
+  }
   .intro {
-    background: url("../img/pageindex/1-1920.jpg") center center / cover no-repeat;
+    height: calc(62.7vw - 100px);
+    background: url("../img/pageindex/1-1920.jpg") top center / cover no-repeat;
+    background-position: 50% 70%;
     &::after {
       width: 813px;
       height: 719px;
       bottom: -100px;
+    }
+    &::before {
+      @include pseudo();
+      left: 0;
+      width: auto;
+      min-width: 136px;
+      min-height: 586px;
+      top: -40px;
     }
     &__title {
       font-size: 96px;
@@ -122,4 +147,5 @@
   .intro {
     background: url("../img/pageindex/1-2560.jpg") bottom center / cover no-repeat;
   }
+
 }
