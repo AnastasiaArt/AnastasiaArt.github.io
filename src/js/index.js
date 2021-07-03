@@ -3,33 +3,37 @@ import 'lightgallery.js/src/js/lightgallery.js'
 import './navigation';
 
 import IMask from 'imask';
-
+const header = document.querySelector('.main-header')
 
 function onHoverService(services) {
     if (window.innerWidth > 768) {
         console.log('122')
         for (let item of services) {
-            item.onmouseover = (e) => {
-                console.log(e)
+            item.onclick = (e) => {
                 e.preventDefault();
                 const modal = item.querySelector('.modal-hover');
+                const li = item.closest('li');
+                const link = li.querySelector('a');
+                console.log(link)
                 // closeServicesModal(modal);
-                // if (modal.style.display === "none") {
+                if (modal.style.display === "none") {
+                console.log(modal)
                 modal.style.display = "flex";
-                // } else {
-                //     modal.style.display = "none";
-                // }
+                link.style.display = "inline-block"
+                } else {
+                    modal.style.display = "none";
+                    link.style.display = "none";
+                }
             }
-            item.onmouseout = (e) => {
-                console.log(e)
-                e.preventDefault();
-                const modal = item.querySelector('.modal-hover');
-                // closeServicesModal(modal);
-                // if (modal.style.display === "none") {
-                // modal.style.display = "flex";
-                // } else {
-                modal.style.display = "none";
-            }
+            // item.onmouseout = (e) => {
+            //     e.preventDefault();
+            //     const modal = item.querySelector('.modal-hover');
+            //     // closeServicesModal(modal);
+            //     // if (modal.style.display === "none") {
+            //     // modal.style.display = "flex";
+            //     // } else {
+            //     modal.style.display = "none";
+            // }
         }
     }
 }
@@ -41,6 +45,9 @@ function resize(callback ) {
 window.addEventListener("resize", () => {
     const services = document.querySelectorAll('.services__item');
     resize( onHoverService(services));
+    if (window.innerWidth >= 1650) {
+        header.classList.remove('main-header--opened');
+    }
         // resize();
 });
 function addAutoResize() {
@@ -68,31 +75,6 @@ require('./buttonsEvent')
         let mask = IMask(element, maskOptions);
         console.log(mask)
     }
-
-    // for(let item of services) {
-    //     item.onmouseover = (e) => {
-    //         console.log(e)
-    //         e.preventDefault();
-    //         const modal = item.querySelector('.modal-hover');
-    //         // closeServicesModal(modal);
-    //         // if (modal.style.display === "none") {
-    //             modal.style.display = "flex";
-    //         // } else {
-    //         //     modal.style.display = "none";
-    //         // }
-    //     }
-    //    item.onmouseout= (e) => {
-    //        console.log(e)
-    //        e.preventDefault();
-    //        const modal = item.querySelector('.modal-hover');
-    //        // closeServicesModal(modal);
-    //        // if (modal.style.display === "none") {
-    //        // modal.style.display = "flex";
-    //        // } else {
-    //        modal.style.display = "none";
-    //    }
-    // }
-
 }
 // // если закрыли вкладку браузера
 // window.onbeforeunload = () => {

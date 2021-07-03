@@ -167,7 +167,7 @@
         @include pseudo();
         left: auto;
         right: calc((1335px - 100vw)/2);
-        width: 70vw;
+        width: 55vw;
         bottom: 30%;
         height: 146px;
 
@@ -175,13 +175,30 @@
     }
   }
 }
+@include respond-to(s-large) {
+  .word {
+      &__img {
+        margin-top: -70px;
+      }
+    &__note {
+      max-width: 300px!important;
+    }
+  };
+}
 
 @include respond-to(large) {
   .word {
     max-width: 1540px;
     margin-left: calc((100vw - 1335px)/2);
+    padding-top: 200px;
+    &::after {
+      height: 450px;
+      bottom: 50px;
+      background-size: 100% 100%;
+    }
     &__img {
       width: 45%;
+      margin-top: -120px;
 
       &::before {
         @media (min-width: 1920px) {
@@ -190,7 +207,7 @@
         }
       }
       &::after {
-        right: calc(100vw - 1540px - (100vw - 1335px) / 2);
+        right: calc(1540px - 100vw + (100vw - 1335px) / 2);
       }
     }
   }

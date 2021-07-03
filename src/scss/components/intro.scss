@@ -2,24 +2,29 @@
   background: url("../img/pageindex/1-320.jpg") center center / cover no-repeat;
   position: relative;
   //background-size: cover;
-  height: calc(100vh - 85px);
+  height: 100vh;
   width: 100%;
+  padding-top: 85px;
 
   &::after {
     @include pseudo();
-    min-width: 358px;
-    min-height: 328px;
+    min-width: 258px;
+    min-height: 200px;
     width: 50%;
-    height: auto;
-    bottom: 0;
+    height: 200px;
+    bottom: 20px;
     right: 0;
-    transform: translateX(50%);
+    transform: translateX(52%);
     background: url("../img/pageindex/intro-wave.png") center center / contain no-repeat;
-    z-index: 100;
-  }
+    z-index: 10;
+    @media (min-width: 500px) {
+      height: 300px;
+    }
+
+    }
   &__title {
     padding-top: 6vh;
-    padding-left: 10px;
+    padding-left: 8px;
     color: $dark-gray;
     margin: $center;
     font-size: 48px;
@@ -59,15 +64,16 @@
 }
 @include respond-to(medium) {
   .intro {
-    background: url("../img/pageindex/1-768.jpg") center center / cover no-repeat;
-    height: calc(100vh - 100px);
+    background: url("../img/pageindex/1-768.jpg") top center / cover no-repeat;
+    //height: calc(100vh - 100px);
+    padding-top: 100px;
     &::before {
       @include pseudo();
       left: 0;
       width: auto;
-      min-width: 80px;
-      min-height: 436px;
-      top: -40px;
+      min-width: 70px;
+      min-height: 300px;
+      top: 40px;
       background: url("../img/pageindex/intro-left.png") center center / contain no-repeat;
       z-index: 100;
     }
@@ -92,8 +98,30 @@
     }
   }
 }
+@media (min-width: 1020px){
+    .intro {
+      background: url("../img/pageindex/1-768.jpg") center center / cover no-repeat;
+      &::after {
+        @include pseudo();
+        min-width: 500px;
+        min-height: 600px;
+        height: 600px;
+      }
+  }
+}
 @include respond-to(x-medium) {
   .intro {
+    background: url("../img/pageindex/1-768.jpg") center center / cover no-repeat;
+    background-position: 50% 40%;
+    &::after {
+      @include pseudo();
+      min-width: 560px;
+    }
+    &::before {
+      min-width: 80px;
+      min-height: 350px;
+      top: 0;
+    }
   }
 }
 @include respond-to(large) {
@@ -103,21 +131,22 @@
     }
   }
   .intro {
-    height: calc(62.7vw - 100px);
+    //height: 62.7vw;
     background: url("../img/pageindex/1-1920.jpg") top center / cover no-repeat;
     background-position: 50% 70%;
     &::after {
-      width: 600px;
-      height: 519px;
+      width: 720px;
+      height: 719px;
       bottom: -100px;
     }
     &::before {
       @include pseudo();
       left: 0;
-      width: auto;
       //min-width: 136px;
       //min-height: 586px;
-      top: -40px;
+      top: 100px;
+      min-width: 100px;
+      min-height: 420px;
     }
     &__title {
       font-size: 96px;
@@ -130,7 +159,7 @@
     &__text {
       font-size: 16px;
       bottom: auto;
-      top: 6vh;
+      top: calc(6vh + 100px);
       padding-left: 15px;
       &:before {
         @include pseudo();
@@ -146,6 +175,20 @@
 @include respond-to(x-large) {
   .intro {
     background: url("../img/pageindex/1-2560.jpg") bottom center / cover no-repeat;
+    &::after {
+      width: 813px;
+      height: 719px;
+      bottom: 0px;
+    }
+    &::before {
+      @include pseudo();
+      left: 0;
+      width: auto;
+      min-width: 136px;
+      min-height: 586px;
+      top: 40px;
+
+    }
   }
 
 }

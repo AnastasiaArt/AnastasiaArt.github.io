@@ -14,10 +14,13 @@
   flex-direction: column;
   font-weight: 300;
   box-shadow: 0 4px 45px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
 
   &--opened {
     right: 0;
     transition: right 0.5s ease-in-out;
+    z-index: 1000;
+    background: $white;
   }
 
   &__btn--call-wrap {
@@ -61,7 +64,7 @@
   position: absolute;
   top: 5px;
   right: 0;
-  z-index: 2;
+  z-index: 1002;
   background-color: transparent;
   border: none;
   outline: none;
@@ -157,13 +160,13 @@
   padding: 12px 0;
 
   &--current {
-    color: $dark-gray;
-    text-align: left;
+    color: #187B88;
   }
 
   &:focus,
   &:hover,
   &:active {
+   color: #187B88;
   }
 }
 

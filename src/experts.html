@@ -33,9 +33,9 @@
             <button class="main-nav__button" type="button" aria-label="Открыть меню"></button>
             <nav class="main-nav main-nav--closed main-nav-nojs">
                 <ul class="main-nav__list">
-                    <li class="main-nav__item"><a class="main-nav__link main-nav__link--current" href="services.html" >Направления и
+                    <li class="main-nav__item"><a class="main-nav__link" href="services.html" >Направления и
                         услуги</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="experts.html">Специалисты</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link main-nav__link--current"" href="experts.html">Специалисты</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="promotions.html">Акции</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
@@ -486,8 +486,6 @@
                 addressFilter = true;
             } else {
                 for(let i of values_address) {
-                    console.log(item)
-                    console.log(i)
                     if (item.values().name.indexOf(i.value) >= 0)
                    return addressFilter = true;
                     else {

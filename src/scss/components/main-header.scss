@@ -1,5 +1,6 @@
 .main-header {
-  position: relative;
+  position: absolute;
+  width: 100%;
   min-height: $header-height-xs;
   //background: rgba(40, 54, 69, 0.3);
   z-index: 100;
@@ -27,6 +28,13 @@
   &__note {
     span {
       display: none;
+    }
+  }
+  &--opened {
+    .main-header__logo,
+    .main-header__time,
+    .main-header__note {
+      z-index: -1;
     }
   }
 }

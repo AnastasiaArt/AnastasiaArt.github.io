@@ -52,6 +52,15 @@
    @include list;
    margin-bottom: 30px;
    li {
+     position: relative;
+     a {
+       display: none;
+       position: absolute;
+       z-index: 90;
+       bottom: 20px;
+       left: 25px;
+       padding: 10px 40px 10px 15px!important;
+     }
      &:nth-child(2) {
        .services__img {
          background: url("../img/pageindex/services-3-xs.jpg") center center / cover no-repeat;
@@ -80,9 +89,8 @@
     .modal-hover {
       display: none;
     }
-
-    &:hover,
-    &:active  {
+    &:focus,
+    &:hover{
       .services__img {
         -webkit-filter: grayscale(0);
         filter: grayscale(0);
@@ -181,6 +189,7 @@
       position: absolute;
       left: calc(66.6% + 15px);
       bottom: 50px;
+      font-family: 'CenturyGothic', sans-serif;
     }
   }
 }
@@ -257,6 +266,7 @@
     padding: 30px;
     text-align: left;
     transition: all 0.3s ease-in-out;
+    padding-bottom: 80px;
 
     &__title {
       color: #666666;

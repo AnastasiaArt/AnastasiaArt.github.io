@@ -7,6 +7,12 @@
   letter-spacing: 0.07em;
   font-weight: 300;
   font-size: 14px;
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: #187B88;
+    color: $white;
+  }
 
   &--blue-border {
     border: 1px solid $blue;
@@ -21,19 +27,15 @@
     color: $white;
     border: 1px solid #3B939C;
     box-shadow: 0px 21px 28px -9px rgba(34, 143, 157, 0.53);
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: #187B88
+    }
   }
 
   &--xl {
     padding: 15px;
-  }
-
-  &:focus,
-  &:hover {
-    box-shadow: inset 0 0 0 3px $white;
-  }
-
-  &:active {
-    transform: scale(0.98);
   }
 
   &--link {
@@ -44,6 +46,18 @@
     font-size: 14px;
     padding: 0;
     font-weight: 300;
+  }
+  &--arrow {
+    position: relative;
+    padding-right: 30px;
+    &::after {
+      @include pseudo();
+      width: 25px;
+      height: 5px;
+      background: url("../img/arrow.svg") center center / contain no-repeat;
+      right: 10px;
+      top: 50%;
+    }
   }
 }
 

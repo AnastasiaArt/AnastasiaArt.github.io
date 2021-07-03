@@ -121,10 +121,6 @@
   .reviews .swiper-slide {
     max-width: 810px;
   }
-}
-
-
-@include respond-to(large) {
   .about, .services-about {
     .swiper-button-next,
     .swiper-button-prev {
@@ -142,18 +138,18 @@
       }
     }
     .swiper-button-next {
-      @media (min-width: 1900px) {
-        left: 65%;
-        right: auto;
-      }
+      left: calc(50vw + 355px - 22px);
+      right: auto;
     }
     .swiper-button-prev {
-      @media (min-width: 1900px) {
-        left: 33%;
-        right: auto;
-      }
+      left: calc(50vw - 355px - 22px);
+      right: auto;
     }
   }
+}
+
+
+@include respond-to(large) {
   .reviews .swiper-container {
     height: 270px;
   }
