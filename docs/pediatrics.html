@@ -14,7 +14,7 @@
     </style>
 <script defer src="js/index.js"></script><link href="bundle.css" rel="stylesheet"></head>
 <body>
-<header class="main-header main-header--opened">
+<header class="main-header main-header--opened relative">
     <div class=" container">
         <div class="main-header__wrapper">
             <div class="main-header__wrapper-logo">
@@ -232,83 +232,106 @@
         <div class="container">
             <h3 class="experts__title subtitle">Специалисты</h3>
 <!--            <ul class="stocks__list experts__list experts__list">-->
-                <ul class="stocks__list stocks__list--all experts__list experts__list--all list" id="expert-list-all">
-                    <li class="stocks__item">
+            <ul class="stocks__list stocks__list--all experts__list experts__list--all list" id="expert-list-all">
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
                         <picture>
                             <source media="(min-width: 1650px)" srcset="img/experts/5-zoom-desktop.jpg 1x">
                             <source media="(min-width: 450px)" srcset="img/experts/5-default-desktop.jpg 1x">
                             <img src="img/experts/5-mobile.jpg" alt="">
                         </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
                         <div class="experts__name"><p><b>Писклова </b>Наталия <span>Михайловна</span></p></div>
                         <div class="experts__prof name">Главный врач, акушер - гинеколог</div>
-                        <!--                            <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>-->
+                        <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         <div class="stocks__btn-wrap">
                             <button type="button" class="btn btn--blue">запись</button>
                             <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
                         </div>
-                    </li>
-                    <li class="stocks__item">
+                    </div>
+                </li>
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
                         <picture>
                             <source media="(min-width: 1650px)" srcset="img/experts/3-zoom-desktop.jpg 1x">
                             <source media="(min-width: 450px)" srcset="img/experts/3-default-desktop.jpg 1x">
                             <img src="img/experts/3-mobile.jpg" alt="">
                         </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
                         <div class="experts__name"><p><b>Искровская </b>Александра <span>Алексеевна</span></p></div>
                         <div class="experts__prof name">Куратор направления "пренатальная диагностика"</div>
-                        <!--                            <p class="experts__text">Краткое hhhхудожественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>-->
+                        <p class="experts__text">Краткое hhhхудожественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         <div class="stocks__btn-wrap">
                             <button type="button" class="btn btn--blue">запись</button>
                             <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
                         </div>
-                    </li>
-                    <li class="stocks__item">
+                    </div>
+                </li>
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
                         <picture>
                             <source media="(min-width: 1650px)" srcset="img/experts/9-zoom-desktop.jpg 1x">
                             <source media="(min-width: 450px)" srcset="img/experts/9-default-desktop.jpg 1x">
                             <img src="img/experts/9-mobile.jpg" alt="">
                         </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
                         <div class="experts__name"><p><b>Тюлькина </b>Ольга  <span>Александровна</span></p></div>
                         <div class="experts__prof name">Врач УЗД</div>
-                        <!--                            <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>-->
+                        <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         <div class="stocks__btn-wrap">
                             <button type="button" class="btn btn--blue">запись</button>
                             <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
                         </div>
-                    </li>
-                    <li class="stocks__item">
+                    </div>
+                </li>
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
                         <picture>
                             <source media="(min-width: 1650px)" srcset="img/experts/8-zoom-desktop.jpg 1x">
                             <source media="(min-width: 450px)" srcset="img/experts/8-default-desktop.jpg 1x">
                             <img src="img/experts/8-mobile.jpg" alt="">
                         </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
                         <div class="experts__name"><p><b>Соколова </b>Валентина <span>Ивановна</span></p></div>
                         <div class="experts__prof name">Онколог-маммолог, врач высшей категории</div>
-                        <!--                            <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>-->
+                        <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         <div class="stocks__btn-wrap">
                             <button type="button" class="btn btn--blue">запись</button>
                             <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
                         </div>
-                    </li>
-                    <li class="stocks__item">
+                    </div>
+                </li>
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
                         <picture>
                             <source media="(min-width: 1650px)" srcset="img/experts/2-zoom-desktop.jpg 1x">
                             <source media="(min-width: 450px)" srcset="img/experts/2-default-desktop.jpg 1x">
                             <img src="img/experts/2-mobile.jpg" alt="">
                         </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
                         <div class="experts__name"><p><b>Жируев </b>Михаиля <span>Семенович</span></p></div>
                         <div class="experts__prof name">Руководитель флебологического отделения. </div>
-                        <!--                            <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>-->
+                        <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         <div class="stocks__btn-wrap">
                             <button type="button" class="btn btn--blue">запись</button>
                             <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
                         </div>
-                    </li>
-                    <li class="stocks__item">
+                    </div>
+                </li>
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
                         <picture>
                             <source media="(min-width: 1650px)" srcset="img/experts/4-zoom-desktop.jpg 1x">
                             <source media="(min-width: 450px)" srcset="img/experts/4-default-desktop.jpg 1x">
                             <img src="img/experts/4-mobile.jpg" alt="">
                         </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
                         <div class="experts__name"><p><b>Кошкина </b>Елизавета <span>Константиновна</span></p></div>
                         <div class="experts__prof name">Врач УЗД</div>
                         <p class="experts__text">Краткое hhhхудожественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
@@ -316,13 +339,17 @@
                             <button type="button" class="btn btn--blue">запись</button>
                             <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
                         </div>
-                    </li>
-                    <li class="stocks__item">
+                    </div>
+                </li>
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
                         <picture>
                             <source media="(min-width: 1650px)" srcset="img/experts/1-zoom-desktop.jpg 1x">
                             <source media="(min-width: 450px)" srcset="img/experts/1-default-desktop.jpg 1x">
                             <img src="img/experts/1-mobile.jpg" alt="">
                         </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
                         <div class="experts__name"><p><b>Жилич </b>Алина <span>Сергеевна</span></p></div>
                         <div class="experts__prof name">Врач акушер-гинеколог</div>
                         <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
@@ -330,13 +357,17 @@
                             <button type="button" class="btn btn--blue">запись</button>
                             <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
                         </div>
-                    </li>
-                    <li class="stocks__item">
+                    </div>
+                </li>
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
                         <picture>
                             <source media="(min-width: 1650px)" srcset="img/experts/6-zoom-desktop.jpg 1x">
                             <source media="(min-width: 450px)" srcset="img/experts/6-default-desktop.jpg 1x">
                             <img src="img/experts/6-mobile.jpg" alt="">
                         </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
                         <div class="experts__name"><p><b>Саад </b>Элиас <span>Инаамович</span></p></div>
                         <div class="experts__prof name">Уролог</div>
                         <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
@@ -344,8 +375,159 @@
                             <button type="button" class="btn btn--blue">запись</button>
                             <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
                         </div>
-                    </li>
+                    </div>
+                </li>
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
+                        <picture>
+                            <source media="(min-width: 1650px)" srcset="img/experts/10-zoom-desktop.jpg 1x">
+                            <source media="(min-width: 450px)" srcset="img/experts/10-default-desktop.jpg 1x">
+                            <img src="img/experts/10-mobile.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
+                        <div class="experts__name"><p><b>Халимбекова </b>Джамиля <span>Ильясовна</span></p></div>
+                        <div class="experts__prof name">Врач онкогинеколог</div>
+                        <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <div class="stocks__btn-wrap">
+                            <button type="button" class="btn btn--blue">запись</button>
+                            <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="stocks__item">
+                    <div class="stocks__img-wrap">
+                        <picture>
+                            <source media="(min-width: 1650px)" srcset="img/experts/7-zoom-desktop.jpg 1x">
+                            <source media="(min-width: 450px)" srcset="img/experts/7-default-desktop.jpg 1x">
+                            <img src="img/experts/7-mobile.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="stocks__text-wrap">
+                        <div class="experts__name"><p><b>Смолина </b>Инна <span>Викторовна</span></p></div>
+                        <div class="experts__prof name">Врач УЗД, акушер - гинеколог</div>
+                        <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <div class="stocks__btn-wrap">
+                            <button type="button" class="btn btn--blue">запись</button>
+                            <button type="button" class="btn btn--blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>
+                        </div>
+                    </div>
+                </li>
             </ul>
+<!--                <ul class="stocks__list stocks__list&#45;&#45;all experts__list experts__list&#45;&#45;all list" id="expert-list-all">-->
+<!--                    <li class="stocks__item">-->
+<!--                        <picture>-->
+<!--                            <source media="(min-width: 1650px)" srcset="img/experts/5-zoom-desktop.jpg 1x">-->
+<!--                            <source media="(min-width: 450px)" srcset="img/experts/5-default-desktop.jpg 1x">-->
+<!--                            <img src="img/experts/5-mobile.jpg" alt="">-->
+<!--                        </picture>-->
+<!--                        <div class="experts__name"><p><b>Писклова </b>Наталия <span>Михайловна</span></p></div>-->
+<!--                        <div class="experts__prof name">Главный врач, акушер - гинеколог</div>-->
+<!--                        &lt;!&ndash;                            <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>&ndash;&gt;-->
+<!--                        <div class="stocks__btn-wrap">-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue">запись</button>-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="stocks__item">-->
+<!--                        <picture>-->
+<!--                            <source media="(min-width: 1650px)" srcset="img/experts/3-zoom-desktop.jpg 1x">-->
+<!--                            <source media="(min-width: 450px)" srcset="img/experts/3-default-desktop.jpg 1x">-->
+<!--                            <img src="img/experts/3-mobile.jpg" alt="">-->
+<!--                        </picture>-->
+<!--                        <div class="experts__name"><p><b>Искровская </b>Александра <span>Алексеевна</span></p></div>-->
+<!--                        <div class="experts__prof name">Куратор направления "пренатальная диагностика"</div>-->
+<!--                        &lt;!&ndash;                            <p class="experts__text">Краткое hhhхудожественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>&ndash;&gt;-->
+<!--                        <div class="stocks__btn-wrap">-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue">запись</button>-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="stocks__item">-->
+<!--                        <picture>-->
+<!--                            <source media="(min-width: 1650px)" srcset="img/experts/9-zoom-desktop.jpg 1x">-->
+<!--                            <source media="(min-width: 450px)" srcset="img/experts/9-default-desktop.jpg 1x">-->
+<!--                            <img src="img/experts/9-mobile.jpg" alt="">-->
+<!--                        </picture>-->
+<!--                        <div class="experts__name"><p><b>Тюлькина </b>Ольга  <span>Александровна</span></p></div>-->
+<!--                        <div class="experts__prof name">Врач УЗД</div>-->
+<!--                        &lt;!&ndash;                            <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>&ndash;&gt;-->
+<!--                        <div class="stocks__btn-wrap">-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue">запись</button>-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="stocks__item">-->
+<!--                        <picture>-->
+<!--                            <source media="(min-width: 1650px)" srcset="img/experts/8-zoom-desktop.jpg 1x">-->
+<!--                            <source media="(min-width: 450px)" srcset="img/experts/8-default-desktop.jpg 1x">-->
+<!--                            <img src="img/experts/8-mobile.jpg" alt="">-->
+<!--                        </picture>-->
+<!--                        <div class="experts__name"><p><b>Соколова </b>Валентина <span>Ивановна</span></p></div>-->
+<!--                        <div class="experts__prof name">Онколог-маммолог, врач высшей категории</div>-->
+<!--                        &lt;!&ndash;                            <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>&ndash;&gt;-->
+<!--                        <div class="stocks__btn-wrap">-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue">запись</button>-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="stocks__item">-->
+<!--                        <picture>-->
+<!--                            <source media="(min-width: 1650px)" srcset="img/experts/2-zoom-desktop.jpg 1x">-->
+<!--                            <source media="(min-width: 450px)" srcset="img/experts/2-default-desktop.jpg 1x">-->
+<!--                            <img src="img/experts/2-mobile.jpg" alt="">-->
+<!--                        </picture>-->
+<!--                        <div class="experts__name"><p><b>Жируев </b>Михаиля <span>Семенович</span></p></div>-->
+<!--                        <div class="experts__prof name">Руководитель флебологического отделения. </div>-->
+<!--                        &lt;!&ndash;                            <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>&ndash;&gt;-->
+<!--                        <div class="stocks__btn-wrap">-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue">запись</button>-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="stocks__item">-->
+<!--                        <picture>-->
+<!--                            <source media="(min-width: 1650px)" srcset="img/experts/4-zoom-desktop.jpg 1x">-->
+<!--                            <source media="(min-width: 450px)" srcset="img/experts/4-default-desktop.jpg 1x">-->
+<!--                            <img src="img/experts/4-mobile.jpg" alt="">-->
+<!--                        </picture>-->
+<!--                        <div class="experts__name"><p><b>Кошкина </b>Елизавета <span>Константиновна</span></p></div>-->
+<!--                        <div class="experts__prof name">Врач УЗД</div>-->
+<!--                        <p class="experts__text">Краткое hhhхудожественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>-->
+<!--                        <div class="stocks__btn-wrap">-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue">запись</button>-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="stocks__item">-->
+<!--                        <picture>-->
+<!--                            <source media="(min-width: 1650px)" srcset="img/experts/1-zoom-desktop.jpg 1x">-->
+<!--                            <source media="(min-width: 450px)" srcset="img/experts/1-default-desktop.jpg 1x">-->
+<!--                            <img src="img/experts/1-mobile.jpg" alt="">-->
+<!--                        </picture>-->
+<!--                        <div class="experts__name"><p><b>Жилич </b>Алина <span>Сергеевна</span></p></div>-->
+<!--                        <div class="experts__prof name">Врач акушер-гинеколог</div>-->
+<!--                        <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>-->
+<!--                        <div class="stocks__btn-wrap">-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue">запись</button>-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="stocks__item">-->
+<!--                        <picture>-->
+<!--                            <source media="(min-width: 1650px)" srcset="img/experts/6-zoom-desktop.jpg 1x">-->
+<!--                            <source media="(min-width: 450px)" srcset="img/experts/6-default-desktop.jpg 1x">-->
+<!--                            <img src="img/experts/6-mobile.jpg" alt="">-->
+<!--                        </picture>-->
+<!--                        <div class="experts__name"><p><b>Саад </b>Элиас <span>Инаамович</span></p></div>-->
+<!--                        <div class="experts__prof name">Уролог</div>-->
+<!--                        <p class="experts__text">Краткое художественное описание Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>-->
+<!--                        <div class="stocks__btn-wrap">-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue">запись</button>-->
+<!--                            <button type="button" class="btn btn&#45;&#45;blue-border openPopUp" onclick="selectExpert(event)">Подробнее</button>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--            </ul>-->
         </div>
     </section>
     <section class="reviews">
@@ -545,7 +727,6 @@
     }
 
     function  searchInTab(event) {
-        console.log(event.target.value)
         serviceList.search(event.target.value)
     }
     let options = {
@@ -577,17 +758,21 @@
     }
 
     let swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         spaceBetween: 30,
-
+        loop: true,
+        loopedSlides: 5, //lo
+        // slidesPerView: "auto",
+        // spaceBetween: 30,
+        slideToClickedSlide: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-            1900: {
-                slidesPerView: 3,
-                spaceBetween: 50,
+            1200: {
+                slidesPerView: "auto",
+                centeredSlides: true,
             },
         },
     })
@@ -640,7 +825,7 @@
         stickyFooter: false,
         closeMethods: ['overlay', 'button', 'escape'],
         closeLabel: "Закрыть",
-        cssClass: ['custom-class-1'],
+        cssClass: ['custom-experts'],
         onOpen: function () {
             console.log('modal open');
         },
@@ -656,6 +841,8 @@
     });
     modal.setContent('<h1>here\'s some content</h1>');
     function selectExpert(event) {
+        const item = event.target.closest('li');
+        modal.setContent(`<div>${item.innerHTML}</div>`);
         modal.open();
     }
 </script>

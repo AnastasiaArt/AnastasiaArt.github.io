@@ -16,7 +16,7 @@
     </style>
 <script defer src="js/index.js"></script><link href="bundle.css" rel="stylesheet"></head>
 <body>
-<header class="main-header main-header--opened">
+<header class="main-header main-header--opened relative">
     <div class=" container">
         <div class="main-header__wrapper">
             <div class="main-header__wrapper-logo">
@@ -191,10 +191,11 @@
         <div class="swiper-container mySwiper">
             <div class="swiper-wrapper"  id="lightgallery">
                 <a href="img/pageindex/about-2-lg.jpg" class="swiper-slide"> <img src="img/pageindex/about-2-lg.jpg"></a>
+                <a href="img/pageindex/about-6-lg.jpg" class="swiper-slide"><img src="img/pageindex/about-6-lg.jpg"></a>
                 <a href="img/pageindex/about-3-lg.jpg" class="swiper-slide"> <img src="img/pageindex/about-3-lg.jpg"></a>
                 <a href="img/pageindex/about-4-lg.jpg" class="swiper-slide"><img src="img/pageindex/about-4-lg.jpg"></a>
                 <a href="img/pageindex/about-5-lg.jpg" class="swiper-slide"> <img src="img/pageindex/about-5-lg.jpg"></a>
-                <a href="img/pageindex/about-6-lg.jpg" class="swiper-slide"><img src="img/pageindex/about-6-lg.jpg"></a>
+                <a href="img/pageindex/about-1-lg.jpg" class="swiper-slide"> <img src="img/pageindex/about-1-lg.jpg"></a>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -330,20 +331,24 @@
         mode: 'lg-fade'
     });
     let swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         spaceBetween: 30,
+        loop: true,
+        loopedSlides: 5, //lo
+        // slidesPerView: "auto",
+        // spaceBetween: 30,
         slideToClickedSlide: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-            1900: {
-                slidesPerView: 3,
-                spaceBetween: 50,
+            1200: {
+                slidesPerView: "auto",
+                centeredSlides: true,
             },
-        }
-    });
+        },
+    })
     let galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 20,
         slidesPerView: 1,

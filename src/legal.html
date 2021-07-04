@@ -11,7 +11,7 @@
     <title>NOVAVITA</title>
 </head>
 <body>
-<header class="main-header main-header--opened">
+<header class="main-header main-header--opened relative">
     <div class=" container">
         <div class="main-header__wrapper">
             <div class="main-header__wrapper-logo">
@@ -201,7 +201,6 @@
         }
         event.target.classList.add('btn--blue');
         serviceList.filter(function(item) {
-            console.log(item.values())
             if(event.target.value === 'all') {
                 return true;
             } else if (item.values().service.indexOf(event.target.value) >= 0) {

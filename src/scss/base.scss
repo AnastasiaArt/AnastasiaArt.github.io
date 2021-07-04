@@ -54,6 +54,11 @@ img {
   height: auto;
 }
 
+.relative {
+  position: relative!important;
+}
+
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden,
@@ -222,6 +227,9 @@ td, th {
   .map {
     height: 600px;
     margin-top: -400px;
+    &--page {
+      margin-top: 0;
+    }
   }
 }
 @include  respond-to(large) {

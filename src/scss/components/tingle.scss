@@ -130,13 +130,56 @@
   height: 22px;
   top: 10px;
 }
+.custom-experts {
+  .stocks__item {
+    text-align: left;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .experts__text {
+    display: block;
+    text-align: left;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 163.19%;
+    letter-spacing: 0.01em;
+    color: #000000;
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: calc(100% - 100px);
+    margin-bottom: 0;
+    order: 2;
+  }
+  .experts__prof {
+    text-align: left;
+    padding-left: 0;
+  }
+  .experts__name {
+    text-align: left;
+    margin-top: 0;
+    color: #535353;
+    font-size: 24px;
+    padding-left: 0;
 
+    &::after {
+      content: none;
+    }
+  }
+}
 @include respond-to(medium) {
   .tingle-modal-box__content {
      & > div{
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
+    }
+    .experts__text {
+      display: block;
+      max-height: 280px;
+      overflow-y: auto;
+      margin-top: 0;
     }
     .stocks {
       &__img-wrap {

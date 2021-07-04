@@ -7,17 +7,14 @@ const header = document.querySelector('.main-header')
 
 function onHoverService(services) {
     if (window.innerWidth > 768) {
-        console.log('122')
         for (let item of services) {
             item.onclick = (e) => {
                 e.preventDefault();
                 const modal = item.querySelector('.modal-hover');
                 const li = item.closest('li');
                 const link = li.querySelector('a');
-                console.log(link)
                 // closeServicesModal(modal);
                 if (modal.style.display === "none") {
-                console.log(modal)
                 modal.style.display = "flex";
                 link.style.display = "inline-block"
                 } else {
@@ -39,7 +36,6 @@ function onHoverService(services) {
 }
 
 function resize(callback ) {
-    console.log('11')
     callback;
 }
 window.addEventListener("resize", () => {

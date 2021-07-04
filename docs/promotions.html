@@ -12,7 +12,7 @@
     <title>NOVAVITA</title>
 <script defer src="js/index.js"></script><link href="bundle.css" rel="stylesheet"></head>
 <body>
-<header class="main-header main-header--opened">
+<header class="main-header main-header--opened relative">
     <div class=" container">
         <div class="main-header__wrapper">
             <div class="main-header__wrapper-logo">
@@ -67,8 +67,8 @@
                 <li class="stocks__item ">
                     <div class="stocks__img-wrap">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-1.jpg 1x">
-                            <img src="img/pageindex/stocks-1-mobile.jpg" alt="">
+                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-5.jpg 1x">
+                            <img src="img/pageindex/stocks-5-mobile.jpg" alt="">
                         </picture>
                         <!--                    <div class="stocks__preview">-->
                         <!--                        <img src="img/about-slider.png" width="93" height="93">-->
@@ -95,8 +95,8 @@
                 <li class="stocks__item">
                     <div class="stocks__img-wrap">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-2.jpg 1x">
-                            <img src="img/pageindex/stocks-2-mobile.jpg" alt="">
+                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-6.jpg 1x">
+                            <img src="img/pageindex/stocks-6-mobile.jpg" alt="">
                         </picture>
                         <div class="stocks__preview">
                             <img src="img/experts/1-mobile.jpg" width="93" height="93">
@@ -123,8 +123,8 @@
                 <li class="stocks__item">
                     <div class="stocks__img-wrap">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-3.jpg 1x">
-                            <img src="img/pageindex/stocks-3-mobile.jpg" alt="">
+                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-1.jpg 1x">
+                            <img src="img/pageindex/stocks-1-mobile.jpg" alt="">
                         </picture>
                         <!--                    <div class="stocks__preview">-->
                         <!--                        <img src="img/about-slider.png" width="93" height="93">-->
@@ -153,8 +153,8 @@
                 <li class="stocks__item">
                     <div class="stocks__img-wrap">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-4.jpg 1x">
-                            <img src="img/pageindex/stocks-4-mobile.jpg" alt="">
+                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-7.jpg 1x">
+                            <img src="img/pageindex/stocks-7-mobile.jpg" alt="">
                         </picture>
                         <div class="stocks__preview">
                             <img src="img/experts/3-mobile.jpg" width="93" height="93">
@@ -175,7 +175,7 @@
                 <li class="stocks__item">
                     <div class="stocks__img-wrap">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-5.jpg 1x">
+                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-4.jpg 1x">
                             <img src="img/pageindex/stocks-5-mobile.jpg" alt="">
                         </picture>
                         <div class="stocks__preview">
@@ -197,8 +197,8 @@
                 <li class="stocks__item">
                     <div class="stocks__img-wrap">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-5.jpg 1x">
-                            <img src="img/pageindex/stocks-5-mobile.jpg" alt="">
+                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-3.jpg 1x">
+                            <img src="img/pageindex/stocks-3-mobile.jpg" alt="">
                         </picture>
                         <!--                    <div class="stocks__preview">-->
                         <!--                        <img src="img/experts/8-mobile.jpg" width="93" height="93">-->
@@ -218,8 +218,8 @@
                 <li class="stocks__item">
                     <div class="stocks__img-wrap">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-5.jpg 1x">
-                            <img src="img/pageindex/stocks-5-mobile.jpg" alt="">
+                            <source media="(min-width: 768px)" srcset="img/pageindex/stocks-2.jpg 1x">
+                            <img src="img/pageindex/stocks-2-mobile.jpg" alt="">
                         </picture>
                         <!--                    <div class="stocks__preview">-->
                         <!--                        <img src="img/about-slider.png" width="93" height="93">-->
@@ -425,7 +425,6 @@
         }
         event.target.classList.add('btn--blue');
         serviceList.filter(function(item) {
-            console.log(item.values())
             if(event.target.value === 'all') {
                 return true;
             } else if (item.values().service.indexOf(event.target.value) >= 0) {
@@ -439,10 +438,6 @@
 
     function showStocks(event) {
         const item = event.target.closest('li');
-        let text = item.querySelector('.stocks__text')
-        let title = item.querySelector('.stocks__title')
-        console.log(text.textContent)
-        console.log(text.html)
         modal.setContent(`<div>${item.innerHTML}</div>`);
         modal.open();
 
