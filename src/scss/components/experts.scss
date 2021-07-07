@@ -192,7 +192,7 @@
         }
 
         &:nth-child(4) {
-          display: block;
+          display: flex;
         }
       }
     }
@@ -245,6 +245,14 @@
       line-height: 124.69%;
       letter-spacing: 0.115em;
     }
+    &__text-wrap {
+      flex-grow: 1;
+      display: flex!important;
+      flex-direction: column;
+      .stocks__btn-wrap {
+        margin-top: auto!important;
+      }
+    }
   }
   &__list--filtered {
     display: none;
@@ -295,7 +303,7 @@
         max-width: 100%;
         grid-template-columns: repeat(7, 1fr);
         grid-column-gap: 70px;
-        grid-row-gap: 10px;
+        grid-row-gap: 20px;
 
         li {
           width: 100%;

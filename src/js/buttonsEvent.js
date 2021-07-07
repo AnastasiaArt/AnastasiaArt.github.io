@@ -35,7 +35,7 @@ if (btnShowExperts) {
             btnShowExperts.classList.toggle('prev')
         } else {
             for (let i of expertsItems) {
-                i.style.display = 'block';
+                i.style.display = 'flex';
                 btnShowExperts.style.display = 'none';
             }
         }

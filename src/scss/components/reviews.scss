@@ -48,6 +48,16 @@
     &__title {
       margin-bottom: 45px;
     }
+    &__slide {
+      padding-top: 5vw;
+      padding-bottom: 5vw;
+      height: auto!important;
+      p {
+        width: 80%;
+        margin: $center;
+        text-align: center;
+      }
+    }
   }
 }
 
