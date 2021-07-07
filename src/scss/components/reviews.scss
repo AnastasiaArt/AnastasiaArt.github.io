@@ -45,6 +45,15 @@
 @include respond-to(medium) {
   .reviews {
     padding-bottom: 150px;
+    position: relative;
+    &::before {
+      @include pseudo();
+      width: 120px;
+      height: 120px;
+      background: url("../img/rewiew.svg") center center / cover no-repeat;
+      left: calc(100vw/2 - 36%);
+      top: 90px;
+    }
     &__title {
       margin-bottom: 45px;
     }
@@ -64,5 +73,22 @@
 @include respond-to(large) {
   .reviews {
     padding-bottom: 130px;
+    &::before {
+      @include pseudo();
+      width: 167px;
+      height: 167px;
+      left: calc(100vw/2 - 500px);
+      top: 60px;
+    }
+    &__slide {
+      p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: #505050;
+      }
+    }
   }
 }
