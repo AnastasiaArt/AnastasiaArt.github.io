@@ -1,0 +1,137 @@
+.contacts-page {
+  position: relative;
+  &__title {
+    font-family: 'BebasNeueBold', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 107.19%;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #D3D3D3;
+    text-align: left;
+    padding-left: calc(4% + 50px);
+  }
+  &__info {
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    img {
+      width: 23px;
+      height: 23px;
+      object-fit: contain;
+    }
+    p {
+      display: flex;
+      margin-top: 0;
+      font-family: 'CenturyGothic', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 153.19%;
+      letter-spacing: 0.075em;
+      color: #464646;
+      span {
+        padding-left: 25px;
+      }
+    }
+  }
+  &__address-start {
+    display: none!important;
+  }
+  &__address {
+    padding: 23px 15px 23px 30px;
+    margin-left: -4%;
+    font-family: 'Roboto', sans-serif!important;
+    font-size: 18px!important;
+    line-height: 136.19%!important;
+    letter-spacing: 0.075em!important;
+    color: #FFFFFF!important;
+    background: rgba(33, 139, 152, 0.9);
+    width: 250px;
+    z-index: 20;
+    position: relative;
+  }
+  &__map {
+    margin-top: -90px;
+  }
+  &__transport {
+    background: rgba(33, 139, 152, 0.9);
+    color: $white;
+    padding: 25px 4%;
+    p {
+      display: flex;
+      font-size: 14px;
+      flex-wrap: nowrap;
+      line-height: 136.19%;
+      letter-spacing: 0.075em;
+      text-align: left;
+      align-items: flex-start;
+      margin: $center;
+      margin-bottom: 20px;
+      width: 85%;
+      b {
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+      }
+      span {
+        padding-left: 25px;
+        //padding-right: 50px;
+      }
+    }
+  }
+  &__detail {
+    padding: 70px 40px;
+  }
+}
+ @media(min-width: 500px) {
+   .contacts-page {
+     &__transport {
+       position: absolute;
+       top: 50px;
+       width: 50%;
+     }
+     &__title {
+       padding-left: 4%;
+     }
+     &__info {
+       width: 50%;
+       margin-left: 50%;
+     }
+     &__address {
+       display: none!important;
+     }
+     &__address-start {
+      display: block!important;
+       padding-left: 50px;
+     }
+     &__map {
+       margin-top: 0;
+     }
+   }
+ }
+
+@include respond-to(medium) {
+  .contacts-page {
+    &__title {
+      font-size: 45px;
+      line-height: 107.19%;
+      letter-spacing: 0.395em;
+    }
+    &__info {
+      p {
+        font-size: 20px;
+        line-height: 136.19%;
+      }
+    }
+    &__transport {
+      top: 80px;
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
