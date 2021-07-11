@@ -83,7 +83,70 @@
     }
   }
   &__detail {
-    padding: 70px 40px;
+    padding: 70px 4% 70px 0;
+    padding-left: calc(4% + 70px);
+    text-align: left;
+    position: relative;
+    font-family: 'CenturyGothic', sans-serif;
+    font-size: 14px;
+    line-height: 136.19%;
+    letter-spacing: 0.075em;
+    &:before {
+      @include pseudo();
+      top: 70px;
+      left: 4%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #228F9D;
+      box-shadow: 0px 24px 35px -13px #228F9D;
+    }
+  }
+  &__detail-wrap {
+    position: relative;
+    &:after {
+      @include pseudo();
+      width: 200vw;
+      height: 35vw;
+      background: url("../img/pageindex/wave.svg") center center / cover no-repeat;
+      bottom: 0;
+      left: -50vw;
+      z-index: -1;
+    }
+  }
+  &__contacts {
+    padding-bottom: 70px;
+    .swiper-slide {
+      width: 80vw;
+      height: 80vw;
+      img {
+        width: 100%;
+      }
+    }
+    .swiper-button-prev {
+      display: none;
+    }
+    .swiper-button-next {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: #515151;
+      color: $white!important;
+      border-radius: 50px;
+      right: calc(20vw - 16px);
+
+      &::after {
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: bold;
+      }
+    }
+  }
+  .subscribe-wrap {
+    padding-top: 0;
+  }
+  .subscribe__subtitle {
+    margin-top: 0;
   }
 }
  @media(min-width: 500px) {
@@ -93,22 +156,58 @@
        top: 50px;
        width: 50%;
      }
+
      &__title {
        padding-left: 4%;
      }
+
      &__info {
        width: 50%;
        margin-left: 50%;
      }
+
      &__address {
-       display: none!important;
+       display: none !important;
      }
+
      &__address-start {
-      display: block!important;
+       display: block !important;
        padding-left: 50px;
      }
+
      &__map {
        margin-top: 0;
+     }
+
+     &__detail-wrap {
+       position: relative;
+
+       &:before {
+         @include pseudo();
+         width: 20vw;
+         max-width: 150px;
+         min-height: 300px;
+         max-height: 500px;
+         background: #515151;
+         right: 0;
+         top: 70px;
+       }
+       &:after {
+         top: 150px;
+       }
+
+       .swiper-slide {
+         width: 75vw;
+         height: 50vw;
+       }
+     }
+     &__detail {
+       max-width: 70vw;
+     }
+     &__contacts {
+       .swiper-button-next {
+         right: calc(25vw - 16px);
+       }
      }
    }
  }
@@ -130,6 +229,16 @@
       top: 80px;
       p {
         width: 100%;
+      }
+    }
+    &__detail {
+      padding-left: calc(9% + 100px);
+      font-size: 16px;
+
+      &:before {
+        left: 9%;
+        width: 46px;
+        height: 46px;
       }
     }
   }
@@ -165,6 +274,69 @@
         font-size: 16px;
       }
     }
+    &__detail-wrap {
+      display: flex;
+      align-items: center;
+      padding-right: calc((100vw - 1620px) /2);
+      padding-left: calc((100vw - 1620px) /2);
+      padding-top: 140px;
+      padding-bottom: 140px;
+      &:before {
+        top: 140px;
+        max-height: 100%;
+        max-width: 100%;
+        height: 610px;
+        min-width: 400px;
+        width: 25vw;
+      }
+    }
+    &__contacts {
+      width: 70%;
+      .swiper-slide {
+        max-width: 728px;
+        max-height: 483px;
+      }
+      .swiper-container {
+        //width: 80%;
+        margin-left: 0;
+      }
+    }
+    &__detail {
+      width: 30%;
+      padding: 0;
+      padding-left: 90px;
+      padding-right: 50px;
+      &::before {
+        top: 0;
+        left: 20px;
+      }
+    }
   }
 }
 
+@include respond-to(large) {
+  .contacts-page {
+    &__contacts {
+      .swiper-button-next {
+        right: auto;
+        left: 710px;
+      }
+    }
+    &__detail-wrap {
+      &::after {
+        width: 100vw;
+        height: 18vw;
+        top: auto;
+        bottom: 50px;
+        left: 0;
+      }
+    }
+    &__transport {
+      max-width: 100%;
+      width: 40vw;
+    }
+    &__info {
+      padding-right: calc((100vw - 1620px) /2);
+    }
+  }
+}

@@ -63,22 +63,24 @@
         <p><img src="img/footer/adress.svg"><span><b>На личном автотранспорте</b><br>Парковка там то</span></p>
         <p><img src="img/footer/adress.svg"><span><b>На общественном транспорте</b><br> Поезд, метро, остановка</span></p>
     </div>
-    <p class="contacts-page__detail">вход там-то через то-то
-        Lorem ipsum dolor sit amet
-        по лестнице <...></p>
-    <section class="contacts-about">
-        <div class="swiper-container mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
-                <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
-                <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
-                <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
-                <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
+    <div class="contacts-page__detail-wrap">
+        <p class="contacts-page__detail">вход там-то через то-то
+            Lorem ipsum dolor sit amet
+            по лестнице <...></p>
+        <section class="contacts-page__contacts">
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/about-slider.png" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
+        </section>
+    </div>
     <div class="subscribe-wrap">
         <section class="subscribe">
             <div class="container">
@@ -205,16 +207,15 @@
 <script>
     let swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
-        spaceBetween: 30,
+        spaceBetween: 13,
+        loop: true,
+        loopedSlides: 5,
 
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-
     })
-
-
 </script>
 </body>
 </html>
