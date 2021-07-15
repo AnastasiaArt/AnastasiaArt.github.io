@@ -162,9 +162,10 @@
         </div>
     </section>
     <section class="stocks" id="stocks">
-        <h3 class="stocks__subtitle subtitle ">Акции</h3>
-        <ul class="stocks__list " id="stocksList">
-            <li class="stocks__item ">
+        <h3 class="stocks__subtitle subtitle">Акции</h3>
+        <div class="swiper-container stocksSwiper">
+        <ul class="stocks__list" id="stocksList">
+            <li class="stocks__item swiper-slide">
                 <div class="stocks__img-wrap">
                     <picture>
                         <source media="(min-width: 768px)" srcset="img/pageindex/stocks-5.jpg 1x">
@@ -192,7 +193,7 @@
                     </div>
                 </div>
             </li>
-            <li class="stocks__item">
+            <li class="stocks__item swiper-slide">
                 <div class="stocks__img-wrap">
                     <picture>
                         <source media="(min-width: 768px)" srcset="img/pageindex/stocks-6.jpg 1x">
@@ -220,7 +221,7 @@
                     </div>
                 </div>
             </li>
-            <li class="stocks__item">
+            <li class="stocks__item swiper-slide">
                 <div class="stocks__img-wrap">
                     <picture>
                         <source media="(min-width: 768px)" srcset="img/pageindex/stocks-1.jpg 1x">
@@ -250,7 +251,7 @@
                     </div>
                 </div>
             </li>
-            <li class="stocks__item">
+            <li class="stocks__item swiper-slide">
                 <div class="stocks__img-wrap">
                     <picture>
                         <source media="(min-width: 768px)" srcset="img/pageindex/stocks-7.jpg 1x">
@@ -272,7 +273,7 @@
                     </div>
                 </div>
             </li>
-            <li class="stocks__item">
+            <li class="stocks__item swiper-slide">
                 <div class="stocks__img-wrap">
                     <picture>
                         <source media="(min-width: 768px)" srcset="img/pageindex/stocks-4.jpg 1x">
@@ -294,7 +295,7 @@
                     </div>
                 </div>
             </li>
-            <li class="stocks__item">
+            <li class="stocks__item swiper-slide">
                 <div class="stocks__img-wrap">
                     <picture>
                         <source media="(min-width: 768px)" srcset="img/pageindex/stocks-3.jpg 1x">
@@ -315,7 +316,7 @@
                     </div>
                 </div>
             </li>
-            <li class="stocks__item">
+            <li class="stocks__item swiper-slide">
                 <div class="stocks__img-wrap">
                     <picture>
                         <source media="(min-width: 768px)" srcset="img/pageindex/stocks-2.jpg 1x">
@@ -357,9 +358,10 @@
                 </div>
             </li>
         </ul>
-        <div class="swiper-button-next" onclick="nextSlide()"></div>
-        <div class="swiper-button-prev" onclick="prevSlide()"></div>
+        </div>
         <a href="promotions.html" class="btn btn--blue-border">Все акции</a>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
         <!--        <button type="button" class="btn btn--blue-border" id="btnShowStocks">Все акции</button>-->
     </section>
     <section class="word">
@@ -420,18 +422,23 @@
                     <p>Хочу поблагодарить весь коллектив Клиники НоваВита за профессионализм и внимательность, начиная с девочек на ресепшен и медсестер, которые очень аккуратно проводят все процедуры, и конечно, поблагодарить Наталию Михайловну Писклову за спокойное ведение моей такой долгожданной беременности, за ее уверенность, что все под контролем.
                         Желаю дальнейшего процветания, побольше благодарных пациентов.
                     </p>
+                    <a href="img/pageindex/review-1.jpg" target="_blank"> <img src="img/pageindex/inst.png" alt=""> </a>
                 </div>
                 <div class="swiper-slide reviews__slide">
                     <p>Клиника оставила очень хорошее впечатление. Младший медперсонал приветливый. Квалификация лечащего врача на очень высоком уровне. </p>
+                    <a href="https://prodoctorov.ru/spb/lpu/68773-novavita/">prodoctorov.ru/spb/lpu/68773-novavita</a>
                 </div>
                 <div class="swiper-slide reviews__slide">
                     <p>Понравилось абсолютно все! Расположение клиники, великолепные администраторы! И, конечно же, команда врачей - Писклова Наталия Михайловна и Тюлькина Ольга Александровна! </p>
+                    <a href="https://prodoctorov.ru/spb/lpu/68773-novavita/">prodoctorov.ru/spb/lpu/68773-novavita</a>
                 </div>
                 <div class="swiper-slide reviews__slide">
                     <p>Очень хорошая клиника, врачи-профессионалы! Самые лучшие администраторы и прекрасный интерьер!</p>
+                    <a href="https://yandex.ru/profile/1473295189">yandex.ru/profile/1473295189</a>
                 </div>
                 <div class="swiper-slide reviews__slide">
                     <p>Специалисты высококвалифицированного уровня. Решают любую проблему максимально легко и быстро. Спасибо Вам большое любимые врачи ❤️</p>
+                    <a href="https://yandex.ru/profile/1473295189">yandex.ru/profile/1473295189</a>
                 </div>
             </div>
             <!-- Add Arrows -->
@@ -783,22 +790,24 @@
     modal.setContent('<h1>here\'s some content</h1>');
 
     let swiperList = document.getElementById('stocksList');
+
     let arr = swiperList.querySelectorAll('li');
-    if (window.innerWidth >= 1650) {
+    if (window.innerWidth >= 1366) {
         for (let i = 0; i <= arr.length - 1; i++) {
-            arr[i].style.display = i < 3 ? 'flex' : 'none';
+            arr[i].style.display = 'flex';
         }
     }
     window.addEventListener("resize", () => {
-        if (window.innerWidth >= 1650) {
+        if (window.innerWidth >= 1366) {
             for (let i = 0; i <= arr.length - 1; i++) {
-                arr[i].style.display = i < 3 ? 'flex' : 'none';
+                arr[i].style.display = 'flex';
             }
         } else {
             for (let i = 0; i <= arr.length - 1; i++) {
                 arr[i].style.display = '';
             }
         }
+        createStoksSwiper();
     });
 
     function nextSlide() {
@@ -845,7 +854,6 @@
         let title = item.querySelector('.stocks__title')
         modal.setContent(`<div>${item.innerHTML}</div>`);
         modal.open();
-
     }
 
     function selectExpert(event) {
@@ -875,7 +883,32 @@
             modal.open();
         }
     }
+    let swiperStok = null;
+    function createStoksSwiper() {
+        if (window.innerWidth >=  1366) {
+            swiperList.classList.add('swiper-wrapper')
+            for (let i = 0; i <= arr.length - 1; i++) {
+                arr[i].classList.add('swiper-slide');
+            }
+            swiperStok = new Swiper(".stocksSwiper", {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            })
+        } else {
+            swiperList.classList.remove('swiper-wrapper');
+            for (let i = 0; i <= arr.length - 1; i++) {
+                arr[i].classList.remove('swiper-slide');
+                arr[i].style.marginRight = '0';
+            }
+            swiperStok = null;
 
+        }
+    }
+    createStoksSwiper();
     // let stocks= new Swiper('.swiperStocks', {
     //     slidesPerView: "auto",
     //     spaceBetween: 30,
@@ -921,6 +954,7 @@
             },
         },
     })
+
     let galleryTop = new Swiper('.gallery-top', {
         slidesPerView: 'auto',
         spaceBetween: 15,
