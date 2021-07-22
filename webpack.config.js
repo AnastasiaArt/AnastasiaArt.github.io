@@ -88,6 +88,31 @@ module.exports = {
             template: 'contacts.html',
             minify: !isDev,
         }),
+        new HtmlWebpackPlugin({
+            filename: 'license.html',
+            template: 'license.html',
+            minify: !isDev,
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'summary-statement.html',
+            template: 'summary-statement.html',
+            minify: !isDev,
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'conclusion.html',
+            template: 'conclusion.html',
+            minify: !isDev,
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'events.html',
+            template: 'events.html',
+            minify: !isDev,
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'excerpt.html',
+            template: 'excerpt.html',
+            minify: !isDev,
+        }),
         new CopyPlugin({
             patterns: [
                 {

@@ -29,7 +29,9 @@ html {
     @include font-style(18px, 33px, 300);
   }
 }
-
+.nobreak {
+  white-space: nowrap;
+}
 body {
   font-family: 'Roboto', sans-serif;
   color: $main-color;
